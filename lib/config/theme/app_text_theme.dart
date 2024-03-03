@@ -1,34 +1,72 @@
 import 'package:flutter/material.dart';
 import '../colors/furniture_colors.dart';
 
+const _nunitoSans = 'Nunito Sans';
+const _gelasio = 'Gelasio';
+
 const _largeTitleStyle = TextStyle(
   fontSize: 30,
   fontWeight: FontWeight.bold,
-  fontFamily: 'Gelasio',
   height: 1.34,
 );
 
 const _mediumTitleStyle = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.w700,
-  fontFamily: 'Gelasio',
   height: 1.34,
 );
 
-final _bodyTextStyle = TextStyle(
+const _smallTitleStyle = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+  height: 1.34,
+);
+
+const _bodyTextStyle = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.normal,
-  fontFamily: 'Nunito Sans',
-  height: 2,
   color: FurnitureColors.grey
 );
 
-final kBlackLargeTitleStyle = _largeTitleStyle.copyWith(
+const _captionTextStyle = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: FurnitureColors.grey
+);
+
+final kBlackGelasioLargeTitleStyle = _largeTitleStyle.copyWith(
   color: FurnitureColors.black,
+  fontFamily: _gelasio,
 );
 
-final kGreyMediumTitleStyle = _mediumTitleStyle.copyWith(
+final kBlackNunitoLargeTitleStyle = _largeTitleStyle.copyWith(
+  color: FurnitureColors.black,
+    fontFamily: _gelasio,
+);
+
+final kGreyGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
   color: FurnitureColors.grey,
+    fontFamily: _gelasio,
 );
 
-final kBodyTextStyle = _bodyTextStyle;
+final kBlackGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
+  color: FurnitureColors.black,
+    fontFamily: _gelasio,
+);
+
+final kBodyNunitoHeight2TextStyle = _bodyTextStyle.copyWith(
+  fontFamily: _nunitoSans,
+  height: 2,
+);
+
+final kBodyNunitoTextStyle = _bodyTextStyle.copyWith(
+  fontFamily: _nunitoSans,
+);
+
+final kBlackNunitoSmallTitleStyle = _smallTitleStyle.copyWith(
+  fontFamily: _nunitoSans,
+);
+
+final kCaptionNunitoTextStyle = _captionTextStyle.copyWith(
+  fontFamily: _nunitoSans,
+);
