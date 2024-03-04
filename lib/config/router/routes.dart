@@ -2,7 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:furniture_shop_app/features/feature_auth/presentation/screens/login_screen.dart';
 import 'package:furniture_shop_app/features/feature_auth/presentation/screens/signup_screen.dart';
 import 'package:furniture_shop_app/features/feature_boarding/presentation/screens/boarding_screen.dart';
+import 'package:furniture_shop_app/features/feature_favorites/presentation/screens/favorites_screen.dart';
 import 'package:furniture_shop_app/features/feature_home/presentation/screens/home_screen.dart';
+import 'package:furniture_shop_app/features/feature_product_detail/presentation/screens/product_detail_screen.dart';
+import '../../common/widgets/tabs_main_wrapper.dart';
+import '../../features/feature_notifications/presentation/screens/notifications_screen.dart';
+import '../../features/feature_profile/presentation/screens/profile_screen.dart';
+import '../../features/feature_settings/presentation/screens/settings_screen.dart';
 import 'fade_page_route.dart';
 
 enum Routes {
@@ -11,11 +17,11 @@ enum Routes {
   signUp,
   home,
   productDetail,
-  favorite,
+  favorites,
   cart,
   checkOut,
   settings,
-  notification,
+  notifications,
   review,
   profile,
   order,
@@ -33,11 +39,11 @@ class _Paths {
   static const String signUp = '/signUp';
   static const String home = '/home';
   static const String productDetail = '/productDetail';
-  static const String favorite = '/favorite';
+  static const String favorites = '/favorites';
   static const String cart = '/cart';
   static const String checkOut = '/checkOut';
   static const String settings = '/settings';
-  static const String notification = '/notification';
+  static const String notifications = '/notifications';
   static const String review = '/review';
   static const String profile = '/profile';
   static const String order = '/order';
@@ -53,11 +59,11 @@ class _Paths {
     Routes.signUp: _Paths.signUp,
     Routes.home: _Paths.home,
     Routes.productDetail: _Paths.productDetail,
-    Routes.favorite: _Paths.favorite,
+    Routes.favorites: _Paths.favorites,
     Routes.cart: _Paths.cart,
     Routes.checkOut: _Paths.checkOut,
     Routes.settings: _Paths.settings,
-    Routes.notification: _Paths.notification,
+    Routes.notifications: _Paths.notifications,
     Routes.review: _Paths.review,
     Routes.profile: _Paths.profile,
     Routes.order: _Paths.order,
@@ -90,9 +96,23 @@ class AppNavigator {
         return FadeRoute(page: const SignUpScreen());
 
       case _Paths.home:
-        return FadeRoute(page: const HomeScreen());
+        return FadeRoute(page: TabsMainWrapper());
 
-      case _Paths.home:
+      case _Paths.productDetail:
+        return FadeRoute(page: const ProductDetailScreen());
+
+      case _Paths.favorites:
+        return FadeRoute(page: const FavoritesScreen());
+
+      case _Paths.notifications:
+        return FadeRoute(page: const NotificationsScreen());
+
+      case _Paths.profile:
+        return FadeRoute(page: const ProfileScreen());
+
+      case _Paths.settings:
+        return FadeRoute(page: const SettingsScreen());
+
       default:
         return FadeRoute(page: const HomeScreen());
     }
