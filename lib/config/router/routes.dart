@@ -4,8 +4,10 @@ import 'package:furniture_shop_app/features/feature_auth/presentation/screens/si
 import 'package:furniture_shop_app/features/feature_boarding/presentation/screens/boarding_screen.dart';
 import 'package:furniture_shop_app/features/feature_favorites/presentation/screens/favorites_screen.dart';
 import 'package:furniture_shop_app/features/feature_home/presentation/screens/home_screen.dart';
+import 'package:furniture_shop_app/features/feature_my_reviews/presentation/screens/my_reviews_screen.dart';
 import 'package:furniture_shop_app/features/feature_product_detail/presentation/screens/product_detail_screen.dart';
 import '../../common/widgets/tabs_main_wrapper.dart';
+import '../../features/feature_my_orders/presentation/screens/my_orders_screen.dart';
 import '../../features/feature_notifications/presentation/screens/notifications_screen.dart';
 import '../../features/feature_profile/presentation/screens/profile_screen.dart';
 import '../../features/feature_settings/presentation/screens/settings_screen.dart';
@@ -28,6 +30,7 @@ enum Routes {
   shippingAddress,
   paymentMethod,
   myReviews,
+  myOrders,
   addShippingAddress,
   addPayment,
   setting,
@@ -50,6 +53,7 @@ class _Paths {
   static const String shippingAddress = '/shippingAddress';
   static const String paymentMethod = '/paymentMethod';
   static const String myReviews = '/myReviews';
+  static const String myOrders = '/myOrders';
   static const String addShippingAddress = '/addShippingAddress';
   static const String addPayment = '/addPayment';
 
@@ -70,6 +74,7 @@ class _Paths {
     Routes.shippingAddress: _Paths.shippingAddress,
     Routes.paymentMethod: _Paths.paymentMethod,
     Routes.myReviews: _Paths.myReviews,
+    Routes.myOrders: _Paths.myOrders,
     Routes.addShippingAddress: _Paths.addShippingAddress,
     Routes.addPayment: _Paths.addPayment,
   };
@@ -113,8 +118,14 @@ class AppNavigator {
       case _Paths.settings:
         return FadeRoute(page: const SettingsScreen());
 
+      case _Paths.myReviews:
+        return FadeRoute(page: const MyReviewsScreen());
+
+      case _Paths.myOrders:
+        return FadeRoute(page: MyOrdersScreen());
+
       default:
-        return FadeRoute(page: const HomeScreen());
+        return FadeRoute(page: HomeScreen());
     }
   }
 
