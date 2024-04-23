@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'config/router/routes.dart';
+import 'config/theme/app_theme.dart';
+import 'features/feature_boarding/presentation/screens/boarding_screen.dart';
+import 'locator.dart';
 
-import 'features/feature_intro/presentation/screens/intro_screen.dart';
+void main() async {
 
-void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // initialize hive
+  await Hive.initFlutter('furniture_box');
+
+  ///  init locator
+  await setup();
+
   runApp(
-    const MaterialApp(
+     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroScreen(),
+      home: const BoardingScreen(),
+      theme: appThemeData,
+       navigatorKey: AppNavigator.navigatorKey,
+       onGenerateRoute: AppNavigator.onGenerateRoute,
     ),
   );
 }
