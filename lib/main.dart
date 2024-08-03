@@ -11,10 +11,10 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // initialize hive
-  await Hive.initFlutter('furniture_box');
-
-  ///  init locator
-  await setup();
+  // await Hive.initFlutter('furniture_box');
+  // //
+  // // ///  init locator
+  // await setup();
 
   runApp(
      MaterialApp(

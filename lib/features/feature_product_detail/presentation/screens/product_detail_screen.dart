@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/common/widgets/furniture_icon_button.dart';
-import 'package:furniture_shop_app/common/widgets/furniture_text_button.dart';
+import 'package:furniture_shop_app/common/widgets/furniture_contained_text_button.dart';
 import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
 
 import '../../../../config/theme/app_text_theme.dart';
@@ -147,7 +147,7 @@ class ProductDetailScreen extends StatelessWidget {
                           icon: Icons.access_alarm, onClick: () {}),
                       SizedBox(width: 10,),
                       Expanded(
-                        child: FurnitureTextButton(
+                        child: FurnitureContainedTextButton(
                           onClick: (){},
                           text: 'Add to Cart',
                         ),

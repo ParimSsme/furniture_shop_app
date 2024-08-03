@@ -27,16 +27,16 @@ class IntroScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 const Spacer(),
-                Text('MAKE YOUR', style: kGreyMediumTitleStyle),
-                const SizedBox(height: 10),
-                Text('HOME BEAUTIFUL', style: kBlackLargeTitleStyle,),
+                // Text('MAKE YOUR', style: kGreyMediumTitleStyle),
+                // const SizedBox(height: 10),
+                // Text('HOME BEAUTIFUL', style: kBlackLargeTitleStyle,),
                  const SizedBox(height: 30),
                  Padding(
                   padding:  const EdgeInsets.only(left: 25),
-                  child: Text(
-                      'The best simple place where you discover most wonderful furnitures and make your home beautiful',
-                  style: kBodyTextStyle,
-                  ),
+                  // child: Text(
+                  //     'The best simple place where you discover most wonderful furnitures and make your home beautiful',
+                  // style: kBodyTextStyle,
+                  // ),
                 ),
                 const Spacer(),
                 const Spacer(),

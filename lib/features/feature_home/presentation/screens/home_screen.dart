@@ -1,13 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_shop_app/common/widgets/furniture_icon_button.dart';
 import 'package:furniture_shop_app/config/router/routes.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
+  final filterList = ['star', 'chair', 'table', 'sofa', 'bed', 'lamp'];
   @override
   Widget build(BuildContext context) {
+
+    int selectedFilter = 3;
+
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -32,11 +37,13 @@ class HomeScreen extends StatelessWidget {
               child: ListView.separated(
                 padding: const EdgeInsets.all(8),
                 scrollDirection: Axis.horizontal,
-                itemCount: 5,
+                itemCount: filterList.length,
                 itemBuilder: (BuildContext context, int index) {
                   return ChoiceChip(
-                    label: Text('Popular'),
+                    label: Image.asset('assets/images/${filterList[index]}.png'),
                     selected: true,
+                    showCheckmark: false,
+                    selectedColor: Colors.amber,
                   );
                 },
                 separatorBuilder: (BuildContext context, int index) =>
@@ -58,6 +65,7 @@ class HomeScreen extends StatelessWidget {
                       AppNavigator.push(Routes.productDetail);
                     },
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Expanded(
                           child: Container(
@@ -69,9 +77,9 @@ class HomeScreen extends StatelessWidget {
                               image: AssetImage('assets/images/item1.jpg'),
                               fit: BoxFit.cover,
                             )),
-                            child: IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.ac_unit),
+                            child: FurnitureIconButton(
+                              onClick: () {},
+                              icon: Icons.ac_unit,
                             ),
                           ),
                         ),

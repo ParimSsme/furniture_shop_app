@@ -34,6 +34,21 @@ const _captionTextStyle = TextStyle(
     color: FurnitureColors.grey
 );
 
+const _buttonStyle = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.bold,
+);
+
+final kContainedButtonStyle = _buttonStyle.copyWith(
+  color: FurnitureColors.onPrimary,
+  fontFamily: _gelasio,
+);
+
+final kButtonStyle = _buttonStyle.copyWith(
+  color: FurnitureColors.black,
+  fontFamily: _gelasio,
+);
+
 final kBlackGelasioLargeTitleStyle = _largeTitleStyle.copyWith(
   color: FurnitureColors.black,
   fontFamily: _gelasio,

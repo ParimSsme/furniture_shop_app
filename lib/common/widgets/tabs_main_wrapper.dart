@@ -14,11 +14,11 @@ class TabsMainWrapper extends StatefulWidget {
 
 class _TabsMainWrapperState extends State<TabsMainWrapper> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    FavoritesScreen(),
-    NotificationsScreen(),
-    ProfileScreen(),
+    const FavoritesScreen(),
+    const NotificationsScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

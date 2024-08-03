@@ -23,6 +23,8 @@ class FurnitureIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
+      height: 45,
+      width: 45,
       decoration: BoxDecoration(
           color: backgroundColor ?? Colors.white,
           borderRadius: BorderRadius.circular(10),
