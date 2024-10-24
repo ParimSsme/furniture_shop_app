@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons:
 #  hive:
 #  hive_flutter:
-#  shared_preferences:
+  shared_preferences:
   get:
 
 dev_dependencies:

@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import '../../common/prefs_operator.dart';
+import '../services/shared_preferences_service.dart';
 
 class InitialBindings extends Bindings {
   @override
-  void dependencies() {
+  void dependencies() async {
 
-    Get.put<PrefsOperator>(PrefsOperator());
+    /// Services
+    // await Get.putAsync(() => SharedPreferencesService().init());
 
   }
 }

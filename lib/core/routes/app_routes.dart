@@ -1,3 +1,4 @@
+import 'package:furniture_shop_app/presentation/pages/splash_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../../common/widgets/tabs_main_wrapper.dart';
@@ -11,8 +12,10 @@ import '../../features/feature_notifications/presentation/screens/notifications_
 import '../../features/feature_product_detail/presentation/screens/product_detail_screen.dart';
 import '../../features/feature_profile/presentation/screens/profile_screen.dart';
 import '../../features/feature_settings/presentation/screens/settings_screen.dart';
+import '../middleware/auth_middleware.dart';
 
 class AppRoutes {
+  static const String splash = '/';
   static const String onboarding = '/onboarding';
   static const String login = '/login';
   static const String signUp = '/signUp';
@@ -34,6 +37,11 @@ class AppRoutes {
   static const String addPayment = '/addPayment';
 
   static List<GetPage> routes = [
+    GetPage(
+      name: splash,
+      page: () => SplashPage(),
+      middlewares: [AuthMiddleware()], // Apply middleware to splash
+    ),
     GetPage(name: home, page: () => const TabsMainWrapper()),
     GetPage(name: myOrders, page: () => MyOrdersScreen()),
     GetPage(name: myReviews, page: () => const MyReviewsScreen()),
