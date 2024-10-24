@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:furniture_shop_app/common/utils/extensions/widget.dart';
-import 'package:furniture_shop_app/config/router/routes.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 
 class SettingsScreen extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/common/widgets/furniture_contained_text_button.dart';
-import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
-import 'package:furniture_shop_app/config/router/routes.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
+import 'package:get/get.dart';
+import '../../../../core/routes/app_routes.dart';
 import '../widgets/auth_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -48,10 +48,10 @@ class LoginScreen extends StatelessWidget {
                     AuthTextField(label: 'Email' , hint: 'Enter your email'),
                     AuthTextField(label: 'Password' , hint: 'Enter your password', suffix: Icon(Icons.remove_red_eye_outlined)),
                     FurnitureContainedTextButton(text: 'Log in', onClick: (){
-                      AppNavigator.replaceWith(Routes.home);
+                      Get.offAllNamed(AppRoutes.home);
                     },),
                     TextButton(onPressed: (){
-                      AppNavigator.push(Routes.signUp);
+                      Get.toNamed(AppRoutes.signUp);
                     }, child: Text('SIGN UP', style: kButtonStyle),)
                   ],
                 ),

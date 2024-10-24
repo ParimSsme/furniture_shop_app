@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/router/routes.dart';
-import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
-
 import '../widgets/my_review_list_item.dart';
 
 class MyReviewsScreen extends StatelessWidget {

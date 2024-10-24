@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/features/feature_auth/presentation/screens/login_screen.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../../../common/widgets/furniture_contained_text_button.dart';
-import '../../../../config/router/routes.dart';
 import '../../../../config/theme/app_text_theme.dart';
+import '../../../../core/routes/app_routes.dart';
 
-class BoardingScreen extends StatelessWidget {
-  const BoardingScreen({super.key});
+class OnboardingScreen extends StatelessWidget {
+  const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class BoardingScreen extends StatelessWidget {
                     alignment: Alignment.center,
                     child: FurnitureContainedTextButton(
                       onClick: () {
-                        AppNavigator.replaceWith(Routes.login);
+                        Get.toNamed(AppRoutes.login);
                       },
                       text: 'Get Started',
                     ),

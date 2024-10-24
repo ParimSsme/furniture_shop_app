@@ -1,5 +1,4 @@
-import 'package:shared_preferences/shared_preferences.dart';
-import '../locator.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 class PrefsOperator {
 
@@ -7,34 +6,36 @@ class PrefsOperator {
   static const isFirstRunPrefKey = "isFirstRun";
   static const isLoggedInPrefKey = "isLoggedIn";
 
-  late SharedPreferences sharedPreferences;
+  // late SharedPreferences sharedPreferences;
   PrefsOperator() {
-    sharedPreferences = locator();
+    // sharedPreferences = locator();
   }
 
 
   saveUsername(token) async {
-    sharedPreferences.setString(usernamePrefKey, token);
-    sharedPreferences.setBool(isLoggedInPrefKey, true);
+    // sharedPreferences.setString(usernamePrefKey, token);
+    // sharedPreferences.setBool(isLoggedInPrefKey, true);
   }
 
   String getUsername() {
-    final String? userToken = sharedPreferences.getString(usernamePrefKey);
-    return userToken ?? '';
+    // final String? userToken = sharedPreferences.getString(usernamePrefKey);
+    // return userToken ?? '';
+    return '';
   }
 
   Future<void> logout() async {
-    sharedPreferences.clear();
-    sharedPreferences.setString(usernamePrefKey, '');
-    sharedPreferences.setBool(isFirstRunPrefKey, false);
+    // sharedPreferences.clear();
+    // sharedPreferences.setString(usernamePrefKey, '');
+    // sharedPreferences.setBool(isFirstRunPrefKey, false);
   }
 
   void setIsFirstRunToFalse() async {
-    sharedPreferences.setBool(isFirstRunPrefKey, false);
+    // sharedPreferences.setBool(isFirstRunPrefKey, false);
   }
 
   Future<bool> getIsFirstRun() async {
-    return sharedPreferences.getBool(isFirstRunPrefKey) ?? true;
+    // return sharedPreferences.getBool(isFirstRunPrefKey) ?? true;
+    return true;
   }
 
 }

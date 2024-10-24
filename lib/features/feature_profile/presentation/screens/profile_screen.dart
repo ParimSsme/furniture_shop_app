@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/common/utils/extensions/widget.dart';
-import 'package:furniture_shop_app/config/router/routes.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import 'package:furniture_shop_app/features/feature_profile/presentation/widgets/profile_clickable_row.dart';
+
+import '../../../../core/routes/app_routes.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -43,31 +44,31 @@ class ProfileScreen extends StatelessWidget {
             const ProfileClickableRow(
               title: 'My Orders',
               value: 'bruno203@gmail.com',
-              nextScreen: Routes.myOrders,
+              nextScreen: AppRoutes.myOrders,
             ).defaultItemVerticalPadding(),
 
             const ProfileClickableRow(
               title: 'Shipping Address',
               value: '',
-              nextScreen: Routes.shippingAddress,
+              nextScreen: AppRoutes.shippingAddress,
             ).defaultItemVerticalPadding(),
 
             const ProfileClickableRow(
               title: 'Payment Method',
               value: '',
-              nextScreen: Routes.paymentMethod,
+              nextScreen: AppRoutes.paymentMethod,
             ).defaultItemVerticalPadding(),
 
             const ProfileClickableRow(
               title: 'My reviews',
               value: '',
-              nextScreen: Routes.myReviews,
+              nextScreen: AppRoutes.myReviews,
             ).defaultItemVerticalPadding(),
 
             const ProfileClickableRow(
               title: 'Settings',
               value: '',
-              nextScreen: Routes.settings,
+              nextScreen: AppRoutes.settings,
             ),
           ],
         ).defaultScreenPadding(),

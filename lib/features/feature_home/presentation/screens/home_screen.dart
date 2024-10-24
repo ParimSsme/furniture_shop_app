@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/common/widgets/furniture_icon_button.dart';
-import 'package:furniture_shop_app/config/router/routes.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../../../../core/routes/app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -62,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                 children: List.generate(6, (index) {
                   return GestureDetector(
                     onTap: () {
-                      AppNavigator.push(Routes.productDetail);
+                      Get.toNamed(AppRoutes.productDetail);
                     },
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

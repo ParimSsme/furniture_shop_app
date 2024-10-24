@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../../config/router/routes.dart';
+import 'package:get/get.dart';
 import '../../../../config/theme/app_text_theme.dart';
+import '../../../../core/routes/app_routes.dart';
 
 class ProfileClickableRow extends StatelessWidget {
   final String title;
   final String value;
-  final Routes nextScreen;
+  final String nextScreen;
   const ProfileClickableRow({
     super.key,
     required this.title,
@@ -17,7 +18,7 @@ class ProfileClickableRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        AppNavigator.push(nextScreen);
+        Get.toNamed(nextScreen);
       },
       child: Card(
         child: Padding(

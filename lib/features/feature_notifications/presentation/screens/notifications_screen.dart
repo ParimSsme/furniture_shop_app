@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/router/routes.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../../../../core/routes/app_routes.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({super.key});
@@ -28,7 +31,7 @@ class NotificationsScreen extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      AppNavigator.push(Routes.productDetail);
+                      Get.toNamed(AppRoutes.productDetail);
                     },
                     child: Row(
                       children: [

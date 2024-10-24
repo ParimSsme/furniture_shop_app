@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/adapters.dart';
-import 'config/router/routes.dart';
+import 'package:get/get_core/src/smart_management.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'config/theme/app_theme.dart';
-import 'features/feature_boarding/presentation/screens/boarding_screen.dart';
-import 'locator.dart';
+import 'core/bindings/initial_bindings.dart';
+import 'core/routes/app_routes.dart';
 
 void main() async {
 
@@ -17,12 +16,20 @@ void main() async {
   // await setup();
 
   runApp(
-     MaterialApp(
+    GetMaterialApp(
+      builder: (context, child){
+        return MediaQuery.withNoTextScaling(
+          child: child!,
+        );
+      },
+      initialBinding: InitialBindings(),
+      smartManagement: SmartManagement.onlyBuilder,
       debugShowCheckedModeBanner: false,
-      home: const BoardingScreen(),
+      getPages: AppRoutes.routes,
+      initialRoute: AppRoutes.onboarding,
       theme: appThemeData,
-       navigatorKey: AppNavigator.navigatorKey,
-       onGenerateRoute: AppNavigator.onGenerateRoute,
+      locale: const Locale('en'),
+      fallbackLocale: const Locale('en'),
     ),
   );
 }
