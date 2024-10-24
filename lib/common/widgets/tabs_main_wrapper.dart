@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
+import 'package:furniture_shop_app/core/assets/app_svg_assets.dart';
 import 'package:furniture_shop_app/features/feature_favorites/presentation/screens/favorites_screen.dart';
 import 'package:furniture_shop_app/features/feature_home/presentation/screens/home_screen.dart';
 import '../../features/feature_notifications/presentation/screens/notifications_screen.dart';
@@ -36,25 +38,25 @@ class _TabsMainWrapperState extends State<TabsMainWrapper> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home),
+            icon: SvgPicture.asset(AppSvgAssets.home),
+            activeIcon: SvgPicture.asset(AppSvgAssets.homeFilled),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark_border_outlined),
-            activeIcon: Icon(Icons.bookmark),
+            icon: SvgPicture.asset(AppSvgAssets.favourite),
+            activeIcon: SvgPicture.asset(AppSvgAssets.favouriteFilled),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_none_outlined),
-            activeIcon: Icon(Icons.notifications),
+            icon: SvgPicture.asset(AppSvgAssets.notification),
+            activeIcon: SvgPicture.asset(AppSvgAssets.notificationFilled),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            activeIcon: Icon(Icons.person),
+            icon: SvgPicture.asset(AppSvgAssets.profile),
+            activeIcon: SvgPicture.asset(AppSvgAssets.profileFilled),
             label: '',
           ),
         ],

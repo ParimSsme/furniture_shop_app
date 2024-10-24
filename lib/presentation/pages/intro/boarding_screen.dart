@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import '../../../../common/widgets/furniture_contained_text_button.dart';
-import '../../../../config/theme/app_text_theme.dart';
-import '../../../../core/routes/app_routes.dart';
+import '../../../common/widgets/furniture_contained_text_button.dart';
+import '../../../config/theme/app_text_theme.dart';
+import '../../../core/routes/app_routes.dart';
+import '../../../core/services/shared_preferences_service.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     final screenHeight = MediaQuery.of(context).size.height;
+    final sharedPreferencesService = Get.find<SharedPreferencesService>();
 
     return Scaffold(
       body: SafeArea(
@@ -19,7 +22,7 @@ class OnboardingScreen extends StatelessWidget {
           decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage('assets/images/intro_background.jpg'),
+              image: AssetImage(AppImageAssets.introBackground),
             ),
           ),
           child: Center(
@@ -50,7 +53,8 @@ class OnboardingScreen extends StatelessWidget {
                     alignment: Alignment.center,
                     child: FurnitureContainedTextButton(
                       onClick: () {
-                        Get.toNamed(AppRoutes.login);
+                        sharedPreferencesService.onboardingCompleted = true; // Set onboarding as completed
+                        Get.offAllNamed(AppRoutes.login);
                       },
                       text: 'Get Started',
                     ),

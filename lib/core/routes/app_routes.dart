@@ -1,10 +1,10 @@
-import 'package:furniture_shop_app/presentation/pages/splash_page.dart';
+import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../../common/widgets/tabs_main_wrapper.dart';
 import '../../features/feature_auth/presentation/screens/login_screen.dart';
 import '../../features/feature_auth/presentation/screens/signup_screen.dart';
-import '../../features/feature_boarding/presentation/screens/boarding_screen.dart';
+import '../../presentation/pages/intro/boarding_screen.dart';
 import '../../features/feature_favorites/presentation/screens/favorites_screen.dart';
 import '../../features/feature_my_orders/presentation/screens/my_orders_screen.dart';
 import '../../features/feature_my_reviews/presentation/screens/my_reviews_screen.dart';
