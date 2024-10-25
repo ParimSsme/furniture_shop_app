@@ -1,6 +1,7 @@
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import '../../presentation/bindings/home_binding.dart';
 import '../../presentation/pages/main/bottom_navigation.dart';
 import '../../features/feature_auth/presentation/screens/login_screen.dart';
 import '../../features/feature_auth/presentation/screens/signup_screen.dart';
@@ -39,10 +40,16 @@ class AppRoutes {
   static List<GetPage> routes = [
     GetPage(
       name: splash,
-      page: () => SplashPage(),
+      page: () => const SplashPage(),
       middlewares: [AuthMiddleware()], // Apply middleware to splash
     ),
-    GetPage(name: home, page: () => const BottomNavigation()),
+    GetPage(
+      name: home,
+      page: () => const BottomNavigation(),
+      bindings: [
+        HomeBinding(),
+      ],
+    ),
     GetPage(name: myOrders, page: () => MyOrdersScreen()),
     GetPage(name: myReviews, page: () => const MyReviewsScreen()),
     GetPage(name: settings, page: () => const SettingsScreen()),

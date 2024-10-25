@@ -76,10 +76,12 @@ final kBodyNunitoHeight2TextStyle = _bodyTextStyle.copyWith(
 
 final kBodyNunitoTextStyle = _bodyTextStyle.copyWith(
   fontFamily: _nunitoSans,
+  fontSize: 14,
 );
 
 final kBlackNunitoSmallTitleStyle = _smallTitleStyle.copyWith(
   fontFamily: _nunitoSans,
+  fontSize: 14,
 );
 
 final kCaptionNunitoTextStyle = _captionTextStyle.copyWith(

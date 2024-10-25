@@ -2,16 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/common/widgets/furniture_icon_button.dart';
 import 'package:furniture_shop_app/common/widgets/furniture_contained_text_button.dart';
 import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
+import 'package:get/get.dart';
 
 import '../../../../config/theme/app_text_theme.dart';
 
 class ProductDetailScreen extends StatelessWidget {
-  const ProductDetailScreen({super.key});
+  const ProductDetailScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+
+    final int id = Get.arguments as int;
 
     return Scaffold(
       body: Column(
@@ -46,7 +51,7 @@ class ProductDetailScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         FurnitureIconButton(
-                          icon: Icons.arrow_back_ios_new,
+                          icon: Icon(Icons.arrow_back_ios_new),
                           onClick: () {},
                           backgroundColor: Colors.white,
                         ),
@@ -93,13 +98,13 @@ class ProductDetailScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Minimal Stand', style: kBlackGelasioMediumTitleStyle),
+                  Text('Minimal Stand $id', style: kBlackGelasioMediumTitleStyle),
                   Row(
                     children: [
                       Text('\$5', style: kBlackNunitoLargeTitleStyle),
                       const Spacer(),
                       FurnitureIconButton(
-                        icon: Icons.add,
+                        icon: Icon(Icons.add),
                         onClick: () {},
                         backgroundColor: Colors.grey.shade300,
                         size: IconButtonSize.small,
@@ -112,7 +117,7 @@ class ProductDetailScreen extends StatelessWidget {
                         ),
                       ),
                       FurnitureIconButton(
-                        icon: Icons.minimize_outlined,
+                        icon: Icon(Icons.minimize_outlined),
                         onClick: () {},
                         backgroundColor: Colors.grey.shade300,
                       ),
@@ -138,17 +143,17 @@ class ProductDetailScreen extends StatelessWidget {
                     'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. ',
                     style: kBodyNunitoTextStyle,
                   ),
-
                   Spacer(),
-
                   Row(
                     children: [
                       FurnitureIconButton(
-                          icon: Icons.access_alarm, onClick: () {}),
-                      SizedBox(width: 10,),
+                          icon: Icon(Icons.access_alarm), onClick: () {}),
+                      SizedBox(
+                        width: 10,
+                      ),
                       Expanded(
                         child: FurnitureContainedTextButton(
-                          onClick: (){},
+                          onClick: () {},
                           text: 'Add to Cart',
                         ),
                       )

@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
+import '../../core/constants/app_colors.dart';
 import '../colors/furniture_colors.dart';
 import 'app_text_theme.dart';
 
 final ThemeData appThemeData = ThemeData(
-
   useMaterial3: true,
+  unselectedWidgetColor: Colors.red,
+
+  /// Choice Chip Theme Data
+  chipTheme: ChipThemeData(
+    showCheckmark: false,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12.0),
+      side: const BorderSide(
+        color: Colors.transparent,
+      ),
+    ),
+    selectedColor: AppColors.selectedChipColor,
+    backgroundColor: AppColors.unselectedChipColor,
+  ),
+
   colorScheme: ColorScheme.fromSeed(
     primary: FurnitureColors.primary,
     onPrimary: FurnitureColors.onPrimary,
@@ -39,5 +54,4 @@ final ThemeData appThemeData = ThemeData(
     seedColor: FurnitureColors.seedColor,
     brightness: Brightness.light,
   ),
-
 );

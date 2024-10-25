@@ -40,6 +40,7 @@ dependencies:
   flutter_svg:
   shared_preferences:
   get:
+  equatable:
 
 dev_dependencies:
   flutter_test:
