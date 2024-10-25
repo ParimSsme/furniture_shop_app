@@ -13,15 +13,15 @@ class FurnitureEntity extends Equatable {
   final List<Color> colors;
 
   const FurnitureEntity({
-    required this.id,
-    required this.name,
-    required this.image,
-    required this.description,
-    required this.price,
-    required this.rate,
-    required this.reviews,
-    required this.isFavourite,
-    required this.colors,
+    this.id = 0,
+    this.name = '',
+    this.image = '',
+    this.description = '',
+    this.price = 0,
+    this.rate = 0.0,
+    this.reviews = 0,
+    this.isFavourite = false,
+    this.colors = const [],
   });
 
   @override

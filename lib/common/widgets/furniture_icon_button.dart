@@ -26,7 +26,7 @@ class FurnitureIconButton extends StatelessWidget {
       height: 45,
       width: 45,
       decoration: BoxDecoration(
-          color: backgroundColor ?? Colors.white,
+          color: backgroundColor ?? Colors.grey.shade400,
           borderRadius: BorderRadius.circular(10),
       ),
       child: IconButton(

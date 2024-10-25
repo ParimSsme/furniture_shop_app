@@ -31,7 +31,6 @@ class AppConstants {
       reviews: 100,
       isFavourite: true,
       colors: [
-        Colors.black,
         Colors.amber,
         Colors.grey,
         Colors.blueGrey,
@@ -64,7 +63,7 @@ class AppConstants {
       reviews: 120,
       isFavourite: true,
       colors: [
-        Colors.black,
+        Colors.blueAccent,
         Colors.amber,
       ],
     ),
@@ -79,8 +78,7 @@ class AppConstants {
       reviews: 100,
       isFavourite: true,
       colors: [
-        Colors.black,
-        Colors.amber,
+        Colors.deepPurpleAccent,
         Colors.grey,
         Colors.blueGrey,
       ],

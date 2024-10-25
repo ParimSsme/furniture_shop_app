@@ -2,6 +2,7 @@ import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../../presentation/bindings/home_binding.dart';
+import '../../presentation/bindings/product_detail_binding.dart';
 import '../../presentation/pages/main/bottom_navigation.dart';
 import '../../features/feature_auth/presentation/screens/login_screen.dart';
 import '../../features/feature_auth/presentation/screens/signup_screen.dart';
@@ -10,7 +11,7 @@ import '../../presentation/pages/main/favorites_page.dart';
 import '../../features/feature_my_orders/presentation/screens/my_orders_screen.dart';
 import '../../features/feature_my_reviews/presentation/screens/my_reviews_screen.dart';
 import '../../presentation/pages/main/notifications_page.dart';
-import '../../features/feature_product_detail/presentation/screens/product_detail_screen.dart';
+import '../../presentation/pages/product_detail_page.dart';
 import '../../presentation/pages/main/profile_page.dart';
 import '../../features/feature_settings/presentation/screens/settings_screen.dart';
 import '../middleware/auth_middleware.dart';
@@ -56,7 +57,7 @@ class AppRoutes {
     GetPage(name: profile, page: () => const ProfilePage()),
     GetPage(name: notifications, page: () => const NotificationsPage()),
     GetPage(name: favorites, page: () => const FavoritesPage()),
-    GetPage(name: productDetail, page: () => const ProductDetailScreen()),
+    GetPage(name: productDetail, page: () => const ProductDetailPage(), binding: ProductDetailBinding(),),
     GetPage(name: onboarding, page: () => const OnboardingScreen()),
     GetPage(name: login, page: () => const LoginScreen()),
     GetPage(name: signUp, page: () => const SignUpScreen()),

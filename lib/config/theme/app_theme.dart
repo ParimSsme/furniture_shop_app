@@ -7,6 +7,11 @@ final ThemeData appThemeData = ThemeData(
   useMaterial3: true,
   unselectedWidgetColor: Colors.red,
 
+  /// Icon Theme Data
+  iconTheme: const IconThemeData (
+    color: AppColors.iconColor
+  ),
+
   /// Choice Chip Theme Data
   chipTheme: ChipThemeData(
     showCheckmark: false,

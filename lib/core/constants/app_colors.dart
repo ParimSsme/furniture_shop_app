@@ -30,4 +30,7 @@ class AppColors {
   static const Color selectedChipIconColor = Colors.white;
   static const Color unselectedChipIconColor = Color(0xff909090);
 
+
+  /// Other Colors
+  static const Color iconColor = Color(0xff242424);
 }

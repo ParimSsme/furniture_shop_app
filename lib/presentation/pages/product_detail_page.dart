@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_shop_app/common/widgets/furniture_icon_button.dart';
 import 'package:furniture_shop_app/common/widgets/furniture_contained_text_button.dart';
-import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
+import 'package:furniture_shop_app/core/assets/app_svg_assets.dart';
+import 'package:furniture_shop_app/presentation/controllers/product_detail_controller.dart';
 import 'package:get/get.dart';
+import '../../config/theme/app_text_theme.dart';
+import '../../core/constants/app_colors.dart';
 
-import '../../../../config/theme/app_text_theme.dart';
-
-class ProductDetailScreen extends StatelessWidget {
-  const ProductDetailScreen({
+class ProductDetailPage extends GetView<ProductDetailController> {
+  const ProductDetailPage({
     super.key,
   });
 
@@ -17,6 +19,7 @@ class ProductDetailScreen extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     final int id = Get.arguments as int;
+    controller.loadData(id: id);
 
     return Scaffold(
       body: Column(
@@ -25,7 +28,7 @@ class ProductDetailScreen extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: SizedBox(
-              height: screenHeight * 0.5,
+              height: screenHeight * 0.6,
               width: screenWidth * 0.86,
               child: Stack(
                 children: [
@@ -39,7 +42,7 @@ class ProductDetailScreen extends StatelessWidget {
                           bottomLeft: Radius.circular(60),
                         ),
                         child: Image.asset(
-                          'assets/images/pro1.jpg',
+                          controller.furniture.image,
                           fit: BoxFit.cover,
                         )),
                   ),
@@ -51,14 +54,16 @@ class ProductDetailScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         FurnitureIconButton(
-                          icon: Icon(Icons.arrow_back_ios_new),
+                          icon: const Icon(Icons.arrow_back_ios_new),
                           onClick: () {},
                           backgroundColor: Colors.white,
                         ),
                         Container(
+                          height: 200,
+                          width: 50,
                           decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(40),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.shade400,
@@ -68,21 +73,22 @@ class ProductDetailScreen extends StatelessWidget {
                                 )
                               ]),
                           child: Column(
-                            children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.add),
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.add),
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.add),
-                              ),
-                            ],
-                          ),
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: List<Widget>.generate(
+                                  controller.furniture.colors.length, (index) {
+                                return Container(
+                                  height: 34,
+                                  width: 34,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    border: Border.all(
+                                        width: 5, color: Colors.grey.shade400),
+                                    color: controller.furniture.colors[index],
+                                  ),
+                                  margin:
+                                      const EdgeInsets.symmetric(vertical: 10),
+                                );
+                              })),
                         ),
                       ],
                     ),
@@ -93,18 +99,21 @@ class ProductDetailScreen extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 25),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('Minimal Stand $id', style: kBlackGelasioMediumTitleStyle),
+                  Text(controller.furniture.name,
+                      style: kBlackGelasioMediumTitleStyle),
                   Row(
                     children: [
-                      Text('\$5', style: kBlackNunitoLargeTitleStyle),
+                      Text('\$ ${controller.furniture.price}',
+                          style: kBlackNunitoLargeTitleStyle),
                       const Spacer(),
                       FurnitureIconButton(
-                        icon: Icon(Icons.add),
+                        icon: const Icon(Icons.add),
                         onClick: () {},
                         backgroundColor: Colors.grey.shade300,
                         size: IconButtonSize.small,
@@ -117,7 +126,7 @@ class ProductDetailScreen extends StatelessWidget {
                         ),
                       ),
                       FurnitureIconButton(
-                        icon: Icon(Icons.minimize_outlined),
+                        icon: const Icon(Icons.horizontal_rule),
                         onClick: () {},
                         backgroundColor: Colors.grey.shade300,
                       ),
@@ -129,31 +138,44 @@ class ProductDetailScreen extends StatelessWidget {
                       const SizedBox(
                         width: 10,
                       ),
-                      Text('4.5', style: kBlackNunitoSmallTitleStyle),
+                      Text('${controller.furniture.rate}',
+                          style: kBlackNunitoSmallTitleStyle),
                       const SizedBox(
                         width: 30,
                       ),
                       Text(
-                        '(50 reviews)',
+                        '(${controller.furniture.reviews} reviews)',
                         style: kCaptionNunitoTextStyle,
                       ),
                     ],
                   ),
-                  Text(
-                    'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. ',
-                    style: kBodyNunitoTextStyle,
+                  Expanded(
+                    child: Center(
+                      child: Text(
+                        controller.furniture.description,
+                        style: kBodyNunitoTextStyle,
+                      ),
+                    ),
                   ),
-                  Spacer(),
+                  // const Spacer(),
                   Row(
                     children: [
                       FurnitureIconButton(
-                          icon: Icon(Icons.access_alarm), onClick: () {}),
-                      SizedBox(
+                        icon: SvgPicture.asset(
+                          AppSvgAssets.favourite,
+                          colorFilter: const ColorFilter.mode(
+                            AppColors.iconColor,
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                        onClick: () {},
+                      ),
+                      const SizedBox(
                         width: 10,
                       ),
                       Expanded(
                         child: FurnitureContainedTextButton(
-                          onClick: () {},
+                          onClick: controller.onAddToCart,
                           text: 'Add to Cart',
                         ),
                       )
