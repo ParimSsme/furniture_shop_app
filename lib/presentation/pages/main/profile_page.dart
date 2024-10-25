@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/common/utils/extensions/widget.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
-import 'package:furniture_shop_app/features/feature_profile/presentation/widgets/profile_clickable_row.dart';
+import 'package:furniture_shop_app/presentation/pages/main/widgets/profile_clickable_row.dart';
+import '../../../core/routes/app_routes.dart';
 
-import '../../../../core/routes/app_routes.dart';
-
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {

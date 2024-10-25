@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../config/theme/app_text_theme.dart';
-import '../../../../core/routes/app_routes.dart';
+import '../../../../../config/theme/app_text_theme.dart';
+import '../../../../../core/routes/app_routes.dart';
 
 class ProfileClickableRow extends StatelessWidget {
   final String title;

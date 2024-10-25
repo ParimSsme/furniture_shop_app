@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
 import 'package:furniture_shop_app/core/assets/app_svg_assets.dart';
-import 'package:furniture_shop_app/features/feature_favorites/presentation/screens/favorites_screen.dart';
-import 'package:furniture_shop_app/features/feature_home/presentation/screens/home_screen.dart';
-import '../../features/feature_notifications/presentation/screens/notifications_screen.dart';
-import '../../features/feature_profile/presentation/screens/profile_screen.dart';
+import 'package:furniture_shop_app/presentation/pages/main/favorites_page.dart';
+import 'package:furniture_shop_app/presentation/pages/main/home_page.dart';
+import 'notifications_page.dart';
+import 'profile_page.dart';
 
-class TabsMainWrapper extends StatefulWidget {
-  const TabsMainWrapper({super.key});
+class BottomNavigation extends StatefulWidget {
+  const BottomNavigation({super.key});
 
   @override
-  State<TabsMainWrapper> createState() => _TabsMainWrapperState();
+  State<BottomNavigation> createState() => _BottomNavigationState();
 }
 
-class _TabsMainWrapperState extends State<TabsMainWrapper> {
+class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    const FavoritesScreen(),
-    const NotificationsScreen(),
-    const ProfileScreen(),
+    HomePage(),
+    const FavoritesPage(),
+    const NotificationsPage(),
+    const ProfilePage(),
   ];
 
   void _onItemTapped(int index) {

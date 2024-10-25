@@ -4,10 +4,10 @@ import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../../../../core/routes/app_routes.dart';
+import '../../../core/routes/app_routes.dart';
 
-class NotificationsScreen extends StatelessWidget {
-  const NotificationsScreen({super.key});
+class NotificationsPage extends StatelessWidget {
+  const NotificationsPage({super.key});
 
   @override
   Widget build(BuildContext context) {

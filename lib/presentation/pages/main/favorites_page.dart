@@ -3,10 +3,10 @@ import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../../../../core/routes/app_routes.dart';
+import '../../../core/routes/app_routes.dart';
 
-class FavoritesScreen extends StatelessWidget {
-  const FavoritesScreen({super.key});
+class FavoritesPage extends StatelessWidget {
+  const FavoritesPage({super.key});
 
   @override
   Widget build(BuildContext context) {

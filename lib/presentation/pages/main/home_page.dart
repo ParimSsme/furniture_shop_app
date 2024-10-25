@@ -5,10 +5,10 @@ import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../../../../core/routes/app_routes.dart';
+import '../../../core/routes/app_routes.dart';
 
-class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
 
   final filterList = ['star', 'chair', 'table', 'sofa', 'bed', 'lamp'];
   @override
