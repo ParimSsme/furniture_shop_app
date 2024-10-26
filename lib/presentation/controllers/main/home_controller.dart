@@ -3,9 +3,9 @@ import 'dart:ffi';
 import 'package:furniture_shop_app/domain/entities/furniture_entity.dart';
 import 'package:get/get.dart';
 
-import '../../core/routes/app_routes.dart';
-import '../../data/datasources/static_data_source.dart';
-import '../../data/repositories/static_data_repository.dart';
+import '../../../core/routes/app_routes.dart';
+import '../../../data/datasources/static_data_source.dart';
+import '../../../data/repositories/static_data_repository.dart';
 
 class HomeController extends GetxController {
   static HomeController get to => Get.find();
@@ -39,4 +39,7 @@ class HomeController extends GetxController {
     required int id,
   }) =>
       Get.toNamed(AppRoutes.productDetail, arguments: id);
+
+  void onMyCartClick () => Get.toNamed(AppRoutes.myCart);
+
 }
