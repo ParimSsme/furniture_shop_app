@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import 'package:furniture_shop_app/core/assets/app_svg_assets.dart';
 import 'package:furniture_shop_app/core/extensions/widget_extension.dart';
-import '../../widgets/auth/login/input_card.dart';
+import '../../widgets/auth/login_input_card.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

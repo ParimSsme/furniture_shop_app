@@ -25,7 +25,7 @@ class AuthTextField extends StatelessWidget {
         labelText: label,
         hintText: hint,
         suffixIcon: suffix,
-        contentPadding: const EdgeInsets.symmetric(vertical: 30),
+        contentPadding: const EdgeInsets.symmetric(vertical: 10),
         enabledBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),
         ),
