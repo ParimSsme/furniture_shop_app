@@ -41,6 +41,7 @@ dependencies:
   shared_preferences:
   get:
   equatable:
+  awesome_snackbar_content:
 
 dev_dependencies:
   flutter_test:
