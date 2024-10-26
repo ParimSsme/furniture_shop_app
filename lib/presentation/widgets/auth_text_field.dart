@@ -5,34 +5,33 @@ class AuthTextField extends StatelessWidget {
   final String label;
   final String hint;
   final Widget? suffix;
+  final TextEditingController controller;
+  final bool isPassword;
   const AuthTextField({
     super.key,
     required this.label,
     required this.hint,
     this.suffix,
+    required this.controller,
+    this.isPassword = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
+      obscureText: isPassword,
       decoration: InputDecoration(
         labelText: label,
         hintText: hint,
         suffixIcon: suffix,
         contentPadding: const EdgeInsets.symmetric(vertical: 30),
-        // errorText: '_errorText',
         enabledBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),
         ),
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: FurnitureColors.grey),
         ),
-        // errorBorder: const UnderlineInputBorder(
-        //   borderSide: BorderSide(color: Colors.yellow, width: 5),
-        // ),
-        // focusedErrorBorder: const UnderlineInputBorder(
-        //   borderSide: BorderSide(color: Colors.red, width: 5),
-        // ),
       ),
     );
   }

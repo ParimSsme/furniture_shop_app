@@ -1,7 +1,9 @@
-import 'package:get/get_state_manager/src/rx_flutter/rx_disposable.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesService extends GetxService {
+  static SharedPreferencesService get to => Get.find();
+
   late SharedPreferences _prefs;
 
   static const String _onboardingCompletedKey = 'onboardingCompleted';
