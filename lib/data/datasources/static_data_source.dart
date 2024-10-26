@@ -2,6 +2,8 @@ import 'package:furniture_shop_app/domain/entities/furniture_entity.dart';
 import '../static/app_constants.dart';
 
 class StaticDataSource {
+  const StaticDataSource();
+
   List<FurnitureEntity> getFurniture() {
     return AppConstants.furniture;
   }

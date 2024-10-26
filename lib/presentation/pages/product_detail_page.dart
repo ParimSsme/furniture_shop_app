@@ -114,20 +114,22 @@ class ProductDetailPage extends GetView<ProductDetailController> {
                       const Spacer(),
                       FurnitureIconButton(
                         icon: const Icon(Icons.add),
-                        onClick: () {},
+                        onClick: controller.increaseProductCount,
                         backgroundColor: Colors.grey.shade300,
                         size: IconButtonSize.small,
                       ),
                       Padding(
                         padding: const EdgeInsets.all(15),
-                        child: Text(
-                          '01',
-                          style: kBlackNunitoSmallTitleStyle,
+                        child: Obx(
+                          () => Text(
+                            '${controller.productCount}',
+                            style: kBlackNunitoSmallTitleStyle,
+                          ),
                         ),
                       ),
                       FurnitureIconButton(
                         icon: const Icon(Icons.horizontal_rule),
-                        onClick: () {},
+                        onClick: controller.reduceProductCount,
                         backgroundColor: Colors.grey.shade300,
                       ),
                     ],
@@ -168,7 +170,7 @@ class ProductDetailPage extends GetView<ProductDetailController> {
                             BlendMode.srcIn,
                           ),
                         ),
-                        onClick: () {},
+                        onClick: controller.onAddToFavorite,
                       ),
                       const SizedBox(
                         width: 10,

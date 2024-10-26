@@ -1,9 +1,12 @@
 import 'package:furniture_shop_app/presentation/bindings/auth/login_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/auth/sign_up_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/main/profile_binding.dart';
+import 'package:furniture_shop_app/presentation/bindings/my_cart_binding.dart';
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
+import 'package:furniture_shop_app/presentation/pages/my_cart_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
 import '../../presentation/bindings/product_detail_binding.dart';
 import '../../presentation/pages/main/bottom_navigation.dart';
@@ -11,7 +14,7 @@ import '../../presentation/pages/auth/login_page.dart';
 import '../../presentation/pages/auth/signup_page.dart';
 import '../../presentation/pages/intro/boarding_screen.dart';
 import '../../presentation/pages/main/favorites_page.dart';
-import '../../features/feature_my_orders/presentation/screens/my_orders_screen.dart';
+import '../../presentation/pages/my_orders_page.dart';
 import '../../features/feature_my_reviews/presentation/screens/my_reviews_screen.dart';
 import '../../presentation/pages/main/notifications_page.dart';
 import '../../presentation/pages/product_detail_page.dart';
@@ -27,7 +30,7 @@ class AppRoutes {
   static const String home = '/home';
   static const String productDetail = '/productDetail';
   static const String favorites = '/favorites';
-  static const String cart = '/cart';
+  static const String myCart = '/my_cart';
   static const String checkOut = '/checkOut';
   static const String settings = '/settings';
   static const String notifications = '/notifications';
@@ -52,10 +55,11 @@ class AppRoutes {
       page: () => const BottomNavigation(),
       bindings: [
         HomeBinding(),
+        FavoritesBinding(),
         ProfileBinding(),
       ],
     ),
-    GetPage(name: myOrders, page: () => MyOrdersScreen()),
+    GetPage(name: myOrders, page: () => MyOrdersPage()),
     GetPage(name: myReviews, page: () => const MyReviewsScreen()),
     GetPage(name: settings, page: () => const SettingsScreen()),
     GetPage(
@@ -80,6 +84,11 @@ class AppRoutes {
       name: signUp,
       page: () => const SignUpPage(),
       binding: SignUpBinding(),
+    ),
+    GetPage(
+      name: myCart,
+      page: () => const MyCartPage(),
+      binding: MyCartBinding(),
     ),
   ];
 }
