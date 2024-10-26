@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shop_app/data/datasources/local_data_source.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_core/src/smart_management.dart';
@@ -12,12 +13,8 @@ void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
+  await LocalDataSource.init();
   await Get.putAsync(() => SharedPreferencesService().init());
-  // initialize hive
-  // await Hive.initFlutter('furniture_box');
-  // //
-  // // ///  init locator
-  // await setup();
 
   runApp(
     GetMaterialApp(
