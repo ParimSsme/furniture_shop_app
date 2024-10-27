@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../../core/routes/app_routes.dart';
+import '../../../core/services/navigation_service.dart';
 
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({super.key});
@@ -31,7 +32,7 @@ class NotificationsPage extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      Get.toNamed(AppRoutes.productDetail);
+                      NavigationService.to.navigateToProductDetail(id: 0);
                     },
                     child: Row(
                       children: [

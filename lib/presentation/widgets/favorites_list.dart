@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shop_app/core/services/navigation_service.dart';
 import 'package:furniture_shop_app/domain/entities/furniture_entity.dart';
 import 'package:furniture_shop_app/presentation/controllers/main/favorites_controller.dart';
 import 'package:get/get.dart';
@@ -21,7 +22,7 @@ class FavoritesList extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return GestureDetector(
           onTap: () {
-            Get.toNamed(AppRoutes.productDetail);
+            NavigationService.to.navigateToProductDetail(id: list[index].id);
           },
           child: _FavoriteListItem(entity: list[index]),
         );
