@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
 import '../colors/furniture_colors.dart';
-import 'app_text_theme.dart';
 
 final ThemeData appThemeData = ThemeData(
   useMaterial3: true,
@@ -25,37 +24,33 @@ final ThemeData appThemeData = ThemeData(
     backgroundColor: AppColors.unselectedChipColor,
   ),
 
+  listTileTheme: ListTileThemeData(
+    tileColor: AppColors.cardColor,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(15),
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+          textStyle: const TextStyle(
+            color: Colors.black,
+          )
+      ),
+  ),
+  cardTheme: const CardTheme(
+    color: AppColors.cardColor,
+    elevation: 5
+  ),
+  checkboxTheme: CheckboxThemeData(
+    checkColor: WidgetStateProperty.all(Colors.white),
+    side: const BorderSide(
+      color: Colors.grey
+    ),
+    splashRadius: 40,
+  ),
   colorScheme: ColorScheme.fromSeed(
     primary: FurnitureColors.primary,
     onPrimary: FurnitureColors.onPrimary,
-    // primaryContainer: FurnitureColors.primaryContainer,
-    // onPrimaryContainer: FurnitureColors.onPrimaryContainer,
-    // secondary: FurnitureColors.secondary,
-    // onSecondary: FurnitureColors.onSecondary,
-    // secondaryContainer: FurnitureColors.secondaryContainer,
-    // onSecondaryContainer: FurnitureColors.onSecondaryContainer,
-    // tertiary: FurnitureColors.tertiary,
-    // onTertiary: FurnitureColors.onTertiary,
-    // tertiaryContainer: FurnitureColors.tertiaryContainer,
-    // onTertiaryContainer: FurnitureColors.onTertiaryContainer,
-    // error: FurnitureColors.error,
-    // onError: FurnitureColors.onError,
-    // errorContainer: FurnitureColors.errorContainer,
-    // onErrorContainer: FurnitureColors.onErrorContainer,
-    // outline: FurnitureColors.outline,
-    // outlineVariant: FurnitureColors.outlineVariant,
-    // background: FurnitureColors.background,
-    // onBackground: FurnitureColors.onBackground,
-    // surface: FurnitureColors.surface,
-    // onSurface: FurnitureColors.onSurface,
-    // surfaceVariant: FurnitureColors.surfaceVariant,
-    // onSurfaceVariant: FurnitureColors.onSurfaceVariant,
-    // inverseSurface: FurnitureColors.inverseSurface,
-    // onInverseSurface: FurnitureColors.onInverseSurface,
-    // inversePrimary: FurnitureColors.inversePrimary,
-    // shadow: FurnitureColors.shadow,
-    // scrim: FurnitureColors.scrim,
-    // surfaceTint: FurnitureColors.surfaceTint,
     seedColor: FurnitureColors.seedColor,
     brightness: Brightness.light,
   ),

@@ -1,74 +1,93 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/common/utils/extensions/widget.dart';
 import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
-import 'package:furniture_shop_app/presentation/pages/main/widgets/profile_clickable_row.dart';
-import '../../../core/routes/app_routes.dart';
+import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
+import 'package:furniture_shop_app/core/extensions/widget_extension.dart';
+import 'package:furniture_shop_app/presentation/controllers/main/profile_controller.dart';
+import 'package:get/get.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = ProfileController.to;
+
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+        title: const Text('Profile'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.exit_to_app),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-                Text('Profile', style: kBlackNunitoSmallTitleStyle),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.exit_to_app)),
-              ],
-            ),
-            Row(
               children: [
                 CircleAvatar(
                   radius: 40,
-                  child: Image.asset('assets/images/person.png'),
+                  child: Image.asset(AppImageAssets.bruno),
                 ),
                 const SizedBox(width: 10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Bruno Pham', style: kBlackGelasioMediumTitleStyle,),
-                    Text('bruno203@gmail.com', style: kBodyNunitoTextStyle,)
+                    Obx(
+                      () => Text(
+                        controller.user.value.name,
+                        style: kBlackGelasioMediumTitleStyle,
+                      ),
+                    ),
+                    Obx(
+                      () => Text(
+                        controller.user.value.email,
+                        style: kBodyNunitoTextStyle,
+                      ),
+                    )
                   ],
                 )
               ],
             ).defaultItemVerticalPadding(),
-
-            const ProfileClickableRow(
-              title: 'My Orders',
-              value: 'bruno203@gmail.com',
-              nextScreen: AppRoutes.myOrders,
+            ListTile(
+              title: const Text('My Orders'),
+              subtitle: const Text('bruno203@gmail.com'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: controller.onMyOrdersClick,
             ).defaultItemVerticalPadding(),
 
-            const ProfileClickableRow(
-              title: 'Shipping Address',
-              value: '',
-              nextScreen: AppRoutes.shippingAddress,
+            ListTile(
+              title: const Text('Shipping Address'),
+              subtitle: const Text('03 Addresses'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: controller.onShippingAddressClick,
             ).defaultItemVerticalPadding(),
 
-            const ProfileClickableRow(
-              title: 'Payment Method',
-              value: '',
-              nextScreen: AppRoutes.paymentMethod,
+            ListTile(
+              title: const Text('Payment Method'),
+              subtitle: const Text('You have 2 cards'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: controller.onPaymentMethodClick,
             ).defaultItemVerticalPadding(),
 
-            const ProfileClickableRow(
-              title: 'My reviews',
-              value: '',
-              nextScreen: AppRoutes.myReviews,
+            ListTile(
+              title: const Text('My reviews'),
+              subtitle: const Text('Reviews for 5 items'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: controller.onMyReviewsClick,
             ).defaultItemVerticalPadding(),
 
-            const ProfileClickableRow(
-              title: 'Settings',
-              value: '',
-              nextScreen: AppRoutes.settings,
-            ),
+            ListTile(
+              title: const Text('Setting'),
+              subtitle: const Text('Notification, Password, FAQ, Contact'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: controller.onSettingsClick,
+            ).defaultItemVerticalPadding(),
+
           ],
         ).defaultScreenPadding(),
       ),
