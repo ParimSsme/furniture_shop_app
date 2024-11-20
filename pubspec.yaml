@@ -86,13 +86,33 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-   - family: Gelasio
-     fonts:
-        - asset: assets/fonts/Gelasio-Bold.ttf
-        - asset: assets/fonts/Gelasio-SemiBold.ttf
-   - family: Nunito Sans
-     fonts:
-       - asset: assets/fonts/NunitoSans-Regular.ttf
+    - family: NunitoSans
+      fonts:
+        - asset: assets/fonts/NunitoSans_Regular.ttf
+        - asset: assets/fonts/NunitoSans_Light.ttf
+          weight: 300
+        - asset: assets/fonts/NunitoSans_SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NunitoSans_Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NunitoSans_ExtraBold.ttf
+          weight: 800
+
+    - family: Gelasio
+      fonts:
+        - asset: assets/fonts/Gelasio_Regular.ttf
+        - asset: assets/fonts/Gelasio_Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Gelasio_SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Gelasio_Bold.ttf
+          weight: 700
+
+    - family: Merriweather
+      fonts:
+        - asset: assets/fonts/Merriweather_Regular.ttf
+        - asset: assets/fonts/Merriweather_Bold.ttf
+          weight: 700
 
   #
   # For details regarding fonts from package dependencies,
