@@ -10,6 +10,7 @@ import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart'
 import 'package:furniture_shop_app/presentation/pages/payment_method_page.dart';
 import 'package:furniture_shop_app/presentation/pages/shipping_address_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import '../../presentation/bindings/intro/onboarding_binding.dart';
 import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
 import '../../presentation/bindings/product_detail_binding.dart';
@@ -79,7 +80,11 @@ class AppRoutes {
       page: () => const ProductDetailPage(),
       binding: ProductDetailBinding(),
     ),
-    GetPage(name: onboarding, page: () => const OnboardingScreen()),
+    GetPage(
+      name: onboarding,
+      page: () => const OnboardingScreen(),
+      binding: OnboardingBinding(),
+    ),
     GetPage(
       name: login,
       page: () => const LoginPage(),
