@@ -2,10 +2,14 @@ import 'package:furniture_shop_app/presentation/bindings/auth/login_binding.dart
 import 'package:furniture_shop_app/presentation/bindings/auth/sign_up_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/main/profile_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/my_cart_binding.dart';
+import 'package:furniture_shop_app/presentation/bindings/orders/add_order_binding.dart';
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_cart_page.dart';
+import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart';
+import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';
+import 'package:furniture_shop_app/presentation/pages/payment_method_page.dart';
+import 'package:furniture_shop_app/presentation/pages/shipping_address_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
-
 import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
 import '../../presentation/bindings/product_detail_binding.dart';
@@ -36,13 +40,14 @@ class AppRoutes {
   static const String notifications = '/notifications';
   static const String review = '/review';
   static const String profile = '/profile';
-  static const String order = '/order';
   static const String shippingAddress = '/shippingAddress';
   static const String paymentMethod = '/paymentMethod';
   static const String myReviews = '/myReviews';
   static const String myOrders = '/myOrders';
   static const String addShippingAddress = '/addShippingAddress';
   static const String addPayment = '/addPayment';
+  static const String addOrder = '/addOrder';
+  static const String congrats = '/congrats';
 
   static List<GetPage> routes = [
     GetPage(
@@ -89,6 +94,23 @@ class AppRoutes {
       name: myCart,
       page: () => const MyCartPage(),
       binding: MyCartBinding(),
+    ),
+    GetPage(
+      name: addOrder,
+      page: () => const AddOrderPage(),
+      binding: AddOrderBinding(),
+    ),
+    GetPage(
+      name: congrats,
+      page: () => const CongratsPage(),
+    ),
+    GetPage(
+      name: paymentMethod,
+      page: () => const PaymentMethodPage(),
+    ),
+    GetPage(
+      name: shippingAddress,
+      page: () => const ShippingAddressPage(),
     ),
   ];
 }
