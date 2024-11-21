@@ -2,35 +2,39 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   /// Primary Colors
-  static const Color primaryColor = Color(0xFF0A73FF);
-  static const Color primaryDarkColor = Color(0xFF0A58CC);
+  static const Color primary = Color(0xFF212121);
+  static const Color primaryDark = Color(0xFF0A58CC);
+  static const Color onPrimary = Color(0xFFFFFFFF);
 
   /// Secondary Colors
-  static const Color secondaryColor = Color(0xFFFD8C04);
-  static const Color accentColor = Color(0xFFF4D35E);
+  static const Color secondary = Color(0xFFFD8C04);
+  static const Color accent = Color(0xFFF4D35E);
 
   /// Background Colors
-  static const Color backgroundColor = Color(0xFFF5F5F5);
-  static const Color cardColor = Color(0xFFFFFFFF);
+  static const Color background = Color(0xFFF5F5F5);
+  static const Color card = Color(0xFFFFFFFF);
 
   /// Text Colors
-  static const Color textPrimaryColor = Color(0xFF333333);
-  static const Color textSecondaryColor = Color(0xFF777777);
-  static const Color textOnPrimaryColor = Color(0xFFFFFFFF);
+  static const Color textPrimary = Color(0xFF333333);
+  static const Color textSecondary = Color(0xFF303030);
+  static const Color textOnPrimary = Color(0xFFFFFFFF);
 
   /// Error Colors
-  static const Color errorColor = Color(0xFFFF4C4C);
+  static const Color error = Color(0xFFFF4C4C);
 
   /// Success Colors
-  static const Color successColor = Color(0xFF4CAF50);
+  static const Color success = Color(0xFF4CAF50);
 
   /// Chip Colors
-  static const Color selectedChipColor = Color(0xff303030);
-  static final Color unselectedChipColor = Colors.grey.shade200;
-  static const Color selectedChipIconColor = Colors.white;
-  static const Color unselectedChipIconColor = Color(0xff909090);
+  static const Color selectedChip = Color(0xff303030);
+  static final Color unselectedChip = Colors.grey.shade200;
+  static const Color selectedChipIcon = Colors.white;
+  static const Color unselectedChipIcon = Color(0xff909090);
 
 
   /// Other Colors
-  static const Color iconColor = Color(0xff242424);
+  static const Color icon = Color(0xff242424);
+  static const Color graniteGrey = Color(0xFF606060);
+  static const Color grey = Color(0xFF808080);
+
 }

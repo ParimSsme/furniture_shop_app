@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import '../../core/constants/app_colors.dart';
-import '../colors/furniture_colors.dart';
 
 final ThemeData appThemeData = ThemeData(
   useMaterial3: true,
@@ -8,7 +8,7 @@ final ThemeData appThemeData = ThemeData(
 
   /// Icon Theme Data
   iconTheme: const IconThemeData (
-    color: AppColors.iconColor
+    color: AppColors.icon
   ),
 
   /// Choice Chip Theme Data
@@ -20,16 +20,19 @@ final ThemeData appThemeData = ThemeData(
         color: Colors.transparent,
       ),
     ),
-    selectedColor: AppColors.selectedChipColor,
-    backgroundColor: AppColors.unselectedChipColor,
+    selectedColor: AppColors.selectedChip,
+    backgroundColor: AppColors.unselectedChip,
   ),
 
+  /// List Tile Theme Data
   listTileTheme: ListTileThemeData(
-    tileColor: AppColors.cardColor,
+    tileColor: AppColors.card,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15),
     ),
   ),
+
+  ///  Outlined Button Theme Data
   outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
           textStyle: const TextStyle(
@@ -37,10 +40,14 @@ final ThemeData appThemeData = ThemeData(
           )
       ),
   ),
+
+  /// Card Theme Data
   cardTheme: const CardTheme(
-    color: AppColors.cardColor,
+    color: AppColors.card,
     elevation: 5
   ),
+
+  /// Check Box Theme Data
   checkboxTheme: CheckboxThemeData(
     checkColor: WidgetStateProperty.all(Colors.white),
     side: const BorderSide(
@@ -48,10 +55,24 @@ final ThemeData appThemeData = ThemeData(
     ),
     splashRadius: 40,
   ),
+
+  /// Text Button Theme Data
+  textButtonTheme: TextButtonThemeData(
+    style: TextButton.styleFrom(
+      backgroundColor: AppColors.primary,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      textStyle: kTextButtonStyle,
+      foregroundColor: kTextButtonStyle.color,
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10)
+    ),
+  ),
+
   colorScheme: ColorScheme.fromSeed(
-    primary: FurnitureColors.primary,
-    onPrimary: FurnitureColors.onPrimary,
-    seedColor: FurnitureColors.seedColor,
+    primary: AppColors.primary,
+    onPrimary: AppColors.onPrimary,
+    seedColor: AppColors.accent,
     brightness: Brightness.light,
   ),
 );

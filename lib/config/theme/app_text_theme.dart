@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../colors/furniture_colors.dart';
+import '../../core/constants/app_colors.dart';
 
 const _nunitoSans = 'Nunito Sans';
 const _gelasio = 'Gelasio';
@@ -25,13 +25,13 @@ const _smallTitleStyle = TextStyle(
 const _bodyTextStyle = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.normal,
-  color: FurnitureColors.grey
+  color: AppColors.textSecondary,
 );
 
 const _captionTextStyle = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    color: FurnitureColors.grey
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: AppColors.textPrimary,
 );
 
 const _buttonStyle = TextStyle(
@@ -39,38 +39,50 @@ const _buttonStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
+const kTextButtonStyle = TextStyle(
+  fontFamily: _gelasio,
+  fontSize: 18,
+  color: AppColors.textOnPrimary,
+);
+
 final kContainedButtonStyle = _buttonStyle.copyWith(
-  color: FurnitureColors.onPrimary,
+  color: AppColors.textOnPrimary,
   fontFamily: _gelasio,
 );
 
 final kButtonStyle = _buttonStyle.copyWith(
-  color: FurnitureColors.black,
+  color: AppColors.textPrimary,
   fontFamily: _gelasio,
 );
 
 final kBlackGelasioLargeTitleStyle = _largeTitleStyle.copyWith(
-  color: FurnitureColors.black,
   fontFamily: _gelasio,
+  color: AppColors.textSecondary,
+  fontSize: 30,
+  fontWeight: FontWeight.bold,
 );
 
 final kBlackNunitoLargeTitleStyle = _largeTitleStyle.copyWith(
-  color: FurnitureColors.black,
-    fontFamily: _gelasio,
+  color: AppColors.textPrimary,
+  fontFamily: _gelasio,
 );
 
 final kGreyGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
-  color: FurnitureColors.grey,
-    fontFamily: _gelasio,
+  fontFamily: _gelasio,
+  color: AppColors.graniteGrey,
+  fontSize: 24,
+  letterSpacing: 0.5,
+  fontWeight: FontWeight.w600,
 );
 
 final kBlackGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
-  color: FurnitureColors.black,
-    fontFamily: _gelasio,
+  color: AppColors.textPrimary,
+  fontFamily: _gelasio,
 );
 
-final kBodyNunitoHeight2TextStyle = _bodyTextStyle.copyWith(
+final kGrayNunitoHeight2TextStyle = _bodyTextStyle.copyWith(
   fontFamily: _nunitoSans,
+  color: AppColors.grey,
   height: 2,
 );
 
@@ -82,6 +94,16 @@ final kBodyNunitoTextStyle = _bodyTextStyle.copyWith(
 final kBlackNunitoSmallTitleStyle = _smallTitleStyle.copyWith(
   fontFamily: _nunitoSans,
   fontSize: 14,
+);
+
+final kGreyNunitoSmallTitleStyle = _smallTitleStyle.copyWith(
+  fontFamily: _nunitoSans,
+  color: AppColors.grey,
+);
+
+final kGreyNunitoMediumTitleStyle = _mediumTitleStyle.copyWith(
+  fontFamily: _nunitoSans,
+  color: AppColors.grey,
 );
 
 final kCaptionNunitoTextStyle = _captionTextStyle.copyWith(
