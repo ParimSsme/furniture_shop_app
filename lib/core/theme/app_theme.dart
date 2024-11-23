@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
-import '../../core/constants/app_colors.dart';
+import 'app_colors.dart';
+import 'app_text_theme.dart';
 
 final ThemeData appThemeData = ThemeData(
   useMaterial3: true,
@@ -10,6 +10,8 @@ final ThemeData appThemeData = ThemeData(
   iconTheme: const IconThemeData (
     color: AppColors.icon
   ),
+
+  scaffoldBackgroundColor: AppColors.background,
 
   /// Choice Chip Theme Data
   chipTheme: ChipThemeData(
@@ -59,13 +61,8 @@ final ThemeData appThemeData = ThemeData(
   /// Text Button Theme Data
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(
-      backgroundColor: AppColors.primary,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
-      ),
       textStyle: kTextButtonStyle,
-      foregroundColor: kTextButtonStyle.color,
-      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10)
+      foregroundColor: AppColors.primary,
     ),
   ),
 

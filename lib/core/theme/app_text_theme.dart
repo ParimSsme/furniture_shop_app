@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/app_colors.dart';
+import 'app_colors.dart';
 
 const _nunitoSans = 'Nunito Sans';
 const _gelasio = 'Gelasio';

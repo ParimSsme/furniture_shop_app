@@ -11,7 +11,7 @@ class AppColors {
   static const Color accent = Color(0xFFF4D35E);
 
   /// Background Colors
-  static const Color background = Color(0xFFF5F5F5);
+  static const Color background =  Color(0xfffafafa);
   static const Color card = Color(0xFFFFFFFF);
 
   /// Text Colors
