@@ -12,7 +12,6 @@ class AppColors {
 
   /// Background Colors
   static const Color background =  Color(0xfffafafa);
-  static const Color card = Color(0xFFFFFFFF);
 
   /// Text Colors
   static const Color textPrimary = Color(0xFF333333);
@@ -31,6 +30,9 @@ class AppColors {
   static const Color selectedChipIcon = Colors.white;
   static const Color unselectedChipIcon = Color(0xff909090);
 
+  /// Card Colors
+  static const Color card = Color(0xFFFFFFFF);
+  static final Color cardShadowColor = Colors.grey.shade100;
 
   /// Other Colors
   static const Color icon = Color(0xff242424);

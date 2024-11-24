@@ -44,9 +44,10 @@ final ThemeData appThemeData = ThemeData(
   ),
 
   /// Card Theme Data
-  cardTheme: const CardTheme(
+  cardTheme: CardTheme(
     color: AppColors.card,
-    elevation: 5
+    elevation: 15,
+    shadowColor: AppColors.cardShadowColor
   ),
 
   /// Check Box Theme Data
