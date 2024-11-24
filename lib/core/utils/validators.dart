@@ -15,7 +15,7 @@ class Validators {
 
   /// Validates if the provided password meets minimum criteria (e.g., 8 characters, at least one number).
   static bool isValidPassword(String password) {
-    final passwordRegex = RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$');
+    final passwordRegex = RegExp(r'^[a-zA-Z0-9]{3,15}$');
     return passwordRegex.hasMatch(password);
   }
 
