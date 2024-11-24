@@ -13,6 +13,13 @@ final ThemeData appThemeData = ThemeData(
 
   scaffoldBackgroundColor: AppColors.background,
 
+  /// AppBar Theme
+  appBarTheme: AppBarTheme(
+    color: Colors.transparent,
+    elevation: 0,
+    titleTextStyle: kBlackMerriweatherSmallTitleStyle,
+  ),
+
   /// Choice Chip Theme Data
   chipTheme: ChipThemeData(
     showCheckmark: false,
@@ -44,7 +51,7 @@ final ThemeData appThemeData = ThemeData(
   ),
 
   /// Card Theme Data
-  cardTheme: CardTheme(
+  cardTheme: const CardTheme(
     color: AppColors.card,
     elevation: 15,
     shadowColor: AppColors.cardShadowColor

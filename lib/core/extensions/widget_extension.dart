@@ -32,8 +32,8 @@ extension WidgetExtension on Widget {
   Padding defaultItemVerticalPadding({
     double left = 0,
     double right = 0,
-    double top = 5,
-    double bottom = 5,
+    double top = 10,
+    double bottom = 10,
   }) =>
       Padding(
         padding:

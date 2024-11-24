@@ -3,6 +3,7 @@ import 'app_colors.dart';
 
 const _nunitoSans = 'Nunito Sans';
 const _gelasio = 'Gelasio';
+const _merriweather = 'Merriweather';
 
 const _largeTitleStyle = TextStyle(
   fontSize: 30,
@@ -64,7 +65,12 @@ final kBlackGelasioLargeTitleStyle = _largeTitleStyle.copyWith(
 
 final kBlackNunitoLargeTitleStyle = _largeTitleStyle.copyWith(
   color: AppColors.textPrimary,
-  fontFamily: _gelasio,
+  fontFamily: _nunitoSans,
+);
+
+final kBlackNunitoMediumTitleStyle = _mediumTitleStyle.copyWith(
+  color: AppColors.textPrimary,
+  fontFamily: _nunitoSans,
 );
 
 final kGreyGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
@@ -78,6 +84,16 @@ final kGreyGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
 final kBlackGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
   color: AppColors.textPrimary,
   fontFamily: _gelasio,
+);
+
+final kBlackMerriweatherMediumTitleStyle = _mediumTitleStyle.copyWith(
+  color: AppColors.textPrimary,
+  fontFamily: _merriweather,
+);
+
+final kBlackMerriweatherSmallTitleStyle = _smallTitleStyle.copyWith(
+  color: AppColors.textPrimary,
+  fontFamily: _merriweather,
 );
 
 final kGrayNunitoHeight2TextStyle = _bodyTextStyle.copyWith(

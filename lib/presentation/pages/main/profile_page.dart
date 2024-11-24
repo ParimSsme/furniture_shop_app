@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
 import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
 import 'package:furniture_shop_app/core/extensions/widget_extension.dart';
 import 'package:furniture_shop_app/presentation/controllers/main/profile_controller.dart';
+import 'package:furniture_shop_app/presentation/pages/main/widgets/profile_tile.dart';
 import 'package:get/get.dart';
+import '../../../core/theme/app_text_theme.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -14,13 +17,13 @@ class ProfilePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+        leading: IconButton(onPressed: () {}, icon: SvgPicture.asset(AppIconAssets.search)),
         title: const Text('Profile'),
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.exit_to_app),
+            onPressed: () => controller.logout(context: context),
+            icon: SvgPicture.asset(AppIconAssets.logout),
           ),
         ],
       ),
@@ -40,7 +43,7 @@ class ProfilePage extends StatelessWidget {
                     Obx(
                       () => Text(
                         controller.user.value.name,
-                        style: kBlackGelasioMediumTitleStyle,
+                        style: kBlackNunitoMediumTitleStyle,
                       ),
                     ),
                     Obx(
@@ -53,40 +56,36 @@ class ProfilePage extends StatelessWidget {
                 )
               ],
             ).defaultItemVerticalPadding(),
-            ListTile(
-              title: const Text('My Orders'),
-              subtitle: const Text('bruno203@gmail.com'),
-              trailing: const Icon(Icons.arrow_forward_ios),
+
+            ProfileTile(
+              title: 'My Orders',
+              subTitle: 'bruno203@gmail.com',
               onTap: controller.onMyOrdersClick,
-            ).defaultItemVerticalPadding(),
+            ),
 
-            ListTile(
-              title: const Text('Shipping Address'),
-              subtitle: const Text('03 Addresses'),
-              trailing: const Icon(Icons.arrow_forward_ios),
+            ProfileTile(
+              title: 'Shipping Address',
+              subTitle: '03 Addresses',
               onTap: controller.onShippingAddressClick,
-            ).defaultItemVerticalPadding(),
+            ),
 
-            ListTile(
-              title: const Text('Payment Method'),
-              subtitle: const Text('You have 2 cards'),
-              trailing: const Icon(Icons.arrow_forward_ios),
+            ProfileTile(
+              title: 'Payment Method',
+              subTitle: 'You have 2 cards',
               onTap: controller.onPaymentMethodClick,
-            ).defaultItemVerticalPadding(),
+            ),
 
-            ListTile(
-              title: const Text('My reviews'),
-              subtitle: const Text('Reviews for 5 items'),
-              trailing: const Icon(Icons.arrow_forward_ios),
+            ProfileTile(
+              title: 'My reviews',
+              subTitle: 'Reviews for 5 items',
               onTap: controller.onMyReviewsClick,
-            ).defaultItemVerticalPadding(),
+            ),
 
-            ListTile(
-              title: const Text('Setting'),
-              subtitle: const Text('Notification, Password, FAQ, Contact'),
-              trailing: const Icon(Icons.arrow_forward_ios),
+            ProfileTile(
+              title: 'Setting',
+              subTitle: 'Notification, Password, FAQ, Contact',
               onTap: controller.onSettingsClick,
-            ).defaultItemVerticalPadding(),
+            ),
 
           ],
         ).defaultScreenPadding(),

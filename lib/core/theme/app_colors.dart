@@ -32,7 +32,7 @@ class AppColors {
 
   /// Card Colors
   static const Color card = Color(0xFFFFFFFF);
-  static final Color cardShadowColor = Colors.grey.shade100;
+  static const Color cardShadowColor = Color(0x408A959E);
 
   /// Other Colors
   static const Color icon = Color(0xff242424);
