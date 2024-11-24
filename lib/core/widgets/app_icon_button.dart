@@ -6,12 +6,12 @@ enum IconButtonSize{
   large
 }
 
-class FurnitureIconButton extends StatelessWidget {
+class AppIconButton extends StatelessWidget {
   final Widget icon;
   final VoidCallback onClick;
   final Color? backgroundColor;
   final IconButtonSize? size;
-  const FurnitureIconButton({
+  const AppIconButton({
     super.key,
     required this.icon,
     required this.onClick,
