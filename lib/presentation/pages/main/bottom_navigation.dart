@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
-import 'package:furniture_shop_app/core/assets/app_svg_assets.dart';
 import 'package:furniture_shop_app/presentation/pages/main/favorites_page.dart';
 import 'package:furniture_shop_app/presentation/pages/main/home_page.dart';
+import '../../../core/assets/app_icon_assets.dart';
+import '../../../core/theme/app_colors.dart';
 import 'notifications_page.dart';
 import 'profile_page.dart';
 
@@ -40,31 +40,31 @@ class _BottomNavigationState extends State<BottomNavigation> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(AppSvgAssets.home),
-            activeIcon: SvgPicture.asset(AppSvgAssets.homeFilled),
+            icon: SvgPicture.asset(AppIconAssets.home),
+            activeIcon: SvgPicture.asset(AppIconAssets.homeFilled),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(AppSvgAssets.favourite),
-            activeIcon: SvgPicture.asset(AppSvgAssets.favouriteFilled),
+            icon: SvgPicture.asset(AppIconAssets.favourite),
+            activeIcon: SvgPicture.asset(AppIconAssets.favouriteFilled),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(AppSvgAssets.notification),
-            activeIcon: SvgPicture.asset(AppSvgAssets.notificationFilled),
+            icon: SvgPicture.asset(AppIconAssets.notification),
+            activeIcon: SvgPicture.asset(AppIconAssets.notificationFilled),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(AppSvgAssets.profile),
-            activeIcon: SvgPicture.asset(AppSvgAssets.profileFilled),
+            icon: SvgPicture.asset(AppIconAssets.profile),
+            activeIcon: SvgPicture.asset(AppIconAssets.profileFilled),
             label: '',
           ),
         ],
         elevation: 15,
         backgroundColor: Colors.white,
         currentIndex: _selectedIndex,
-        selectedItemColor: FurnitureColors.black,
-        unselectedItemColor: FurnitureColors.lightGrey,
+        selectedItemColor: AppColors.background,
+        unselectedItemColor: AppColors.accent,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
 import 'package:furniture_shop_app/core/widgets/app_card.dart';
 import '../../../../core/assets/app_image_assets.dart';
-import '../../../../core/assets/app_svg_assets.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_theme.dart';
 
@@ -50,7 +50,7 @@ class MyReviewListItem extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(right: 5),
                       child: SvgPicture.asset(
-                        AppSvgAssets.star,
+                        AppIconAssets.star,
                         height: 16,
                         width: 16,
                       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:furniture_shop_app/core/assets/app_svg_assets.dart';
+import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
 import 'package:furniture_shop_app/presentation/pages/my_reviews/widgets/my_review_list_item.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +20,7 @@ class MyReviewsPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset(AppSvgAssets.search),
+            icon: SvgPicture.asset(AppIconAssets.search),
           ),
         ],
       ),
