@@ -11,6 +11,7 @@ import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart
 import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';
 import 'package:furniture_shop_app/presentation/pages/payment_method/add_payment_method_page.dart';
 import 'package:furniture_shop_app/presentation/pages/settings/settings_page.dart';
+import 'package:furniture_shop_app/presentation/pages/shipping_address/add_shipping_address_page.dart';
 import 'package:furniture_shop_app/presentation/pages/shipping_address/shipping_address_list_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../../presentation/bindings/intro/onboarding_binding.dart';
@@ -18,6 +19,7 @@ import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
 import '../../presentation/bindings/payment_method/add_payment_method_binding.dart';
 import '../../presentation/bindings/product_detail_binding.dart';
+import '../../presentation/bindings/shipping_address/add_shipping_address_binding.dart';
 import '../../presentation/bindings/shipping_address/shipping_address_list_binding.dart';
 import '../../presentation/pages/main/bottom_navigation.dart';
 import '../../presentation/pages/auth/login_page.dart';
@@ -128,6 +130,11 @@ class AppRoutes {
       name: shippingAddress,
       page: () => ShippingAddressListPage(),
       binding: ShippingAddressListBinding()
+    ),
+    GetPage(
+      name: addShippingAddress,
+      page: () => AddShippingAddressPage(),
+      binding: AddShippingAddressBinding()
     ),
   ];
 }

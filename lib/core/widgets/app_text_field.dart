@@ -61,7 +61,10 @@ class _AppTextFieldState extends State<AppTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10,),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 15,
+        vertical: 10,
+      ),
       margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
         color: (isFilled)
@@ -95,9 +98,12 @@ class _AppTextFieldState extends State<AppTextField> {
                 });
               }
             },
-            // obscureText: widget.obscureText,
+            obscureText: widget.obscureText,
             maxLength: widget.maxLength,
             inputFormatters: widget.inputFormatters,
+            style: kBlackNunitoSmallTitleStyle.copyWith(
+              fontSize: 18,
+            ),
             decoration: InputDecoration(
               contentPadding: EdgeInsets.zero,
               isCollapsed: true,
