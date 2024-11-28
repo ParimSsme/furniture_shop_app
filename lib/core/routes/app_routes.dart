@@ -3,12 +3,13 @@ import 'package:furniture_shop_app/presentation/bindings/auth/sign_up_binding.da
 import 'package:furniture_shop_app/presentation/bindings/main/profile_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/my_cart_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/orders/add_order_binding.dart';
+import 'package:furniture_shop_app/presentation/bindings/payment_method/payment_method_list_binding.dart';
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_cart_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_reviews/my_reviews_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';
-import 'package:furniture_shop_app/presentation/pages/payment_method_page.dart';
+import 'package:furniture_shop_app/presentation/pages/settings/settings_page.dart';
 import 'package:furniture_shop_app/presentation/pages/shipping_address_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../../presentation/bindings/intro/onboarding_binding.dart';
@@ -22,9 +23,9 @@ import '../../presentation/pages/intro/boarding_screen.dart';
 import '../../presentation/pages/main/favorites_page.dart';
 import '../../presentation/pages/my_orders_page.dart';
 import '../../presentation/pages/main/notifications_page.dart';
+import '../../presentation/pages/payment_method/payment_method_list_page.dart';
 import '../../presentation/pages/product_detail/product_detail_page.dart';
 import '../../presentation/pages/main/profile_page.dart';
-import '../../features/feature_settings/presentation/screens/settings_screen.dart';
 import '../middleware/auth_middleware.dart';
 
 class AppRoutes {
@@ -67,7 +68,7 @@ class AppRoutes {
     ),
     GetPage(name: myOrders, page: () => MyOrdersPage()),
     GetPage(name: myReviews, page: () => const MyReviewsPage()),
-    GetPage(name: settings, page: () => const SettingsScreen()),
+    GetPage(name: settings, page: () => const SettingsPage()),
     GetPage(
       name: profile,
       page: () => const ProfilePage(),
@@ -111,7 +112,8 @@ class AppRoutes {
     ),
     GetPage(
       name: paymentMethod,
-      page: () => const PaymentMethodPage(),
+      page: () => PaymentMethodListPage(),
+      binding: PaymentMethodListBinding()
     ),
     GetPage(
       name: shippingAddress,

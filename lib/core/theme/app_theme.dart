@@ -13,6 +13,13 @@ final ThemeData appThemeData = ThemeData(
 
   scaffoldBackgroundColor: AppColors.background,
 
+  /// Floating action button
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: Colors.white,
+    elevation: 4,
+    foregroundColor: Colors.grey.shade800
+  ),
+
   /// AppBar Theme
   appBarTheme: AppBarTheme(
     color: Colors.transparent,

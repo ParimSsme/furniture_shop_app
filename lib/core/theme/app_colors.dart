@@ -12,6 +12,8 @@ class AppColors {
 
   /// Background Colors
   static const Color background =  Color(0xfffafafa);
+  static const Color selectedPaymentCardBackground = Color(0xff222222);
+  static const Color unselectedPaymentCardBackground = Color(0xff999999);
 
   /// Text Colors
   static const Color textPrimary = Color(0xFF333333);
