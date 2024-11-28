@@ -4,8 +4,7 @@ import 'package:equatable/equatable.dart';
 class PaymentMethodEntity extends Equatable {
   final int id;
   final String image;
-  final Color backgroundColor;
-  final int cardNumberLastFourDigits;
+  final String cardNumberLastFourDigits;
   final String cardHolderName;
   final String expiryDate;
   final bool isSelected;
@@ -13,8 +12,7 @@ class PaymentMethodEntity extends Equatable {
   const PaymentMethodEntity({
     this.id = -1,
     this.image = '',
-    this.backgroundColor = const Color(0xff222222),
-    this.cardNumberLastFourDigits = 0,
+    this.cardNumberLastFourDigits = '',
     this.cardHolderName = '',
     this.expiryDate = '',
     this.isSelected = false,
@@ -24,7 +22,6 @@ class PaymentMethodEntity extends Equatable {
   List<Object?> get props => [
     id,
     image,
-    backgroundColor,
     cardNumberLastFourDigits,
     cardHolderName,
     expiryDate,

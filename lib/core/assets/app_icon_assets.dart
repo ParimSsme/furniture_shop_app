@@ -26,8 +26,8 @@ class AppIconAssets {
   static const String disabledMasterCard = '$_basePath/master_card_disabled.svg';
   static const String dhl = '$_basePath/dhl.svg';
   static const String congrats = '$_basePath/congrats.svg';
-  static const String masterCard = '$_basePath/master_card.svg';
-  static const String visa = '$_basePath/visa.svg';
+  static const String masterCard = '$_basePath/mastercard.svg';
+  static const String visaCard = '$_basePath/visacard.svg';
   static const String logout = '$_basePath/logout.svg';
   static const String search = '$_basePath/search.svg';
   static const String edit = '$_basePath/edit.svg';

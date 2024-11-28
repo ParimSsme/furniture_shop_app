@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import '../params/screen/add_order_screen_param.dart';
 import '../routes/app_routes.dart';
 
 class AppNavigator {
@@ -14,7 +15,10 @@ class AppNavigator {
 
   void navigateToHome() => Get.toNamed(AppRoutes.home);
 
-  void navigateToProductDetail() => Get.toNamed(AppRoutes.productDetail);
+  void navigateToProductDetail({
+    required int id,
+  }) =>
+      Get.toNamed(AppRoutes.productDetail, arguments: id);
 
   void navigateToFavorites() => Get.toNamed(AppRoutes.favorites);
 
@@ -34,15 +38,21 @@ class AppNavigator {
 
   void navigateToPaymentMethod() => Get.toNamed(AppRoutes.paymentMethod);
 
+  void navigateToAddPaymentMethod() => Get.toNamed(AppRoutes.addPaymentMethod);
+
   void navigateToMyReviews() => Get.toNamed(AppRoutes.myReviews);
 
   void navigateToMyOrders() => Get.toNamed(AppRoutes.myOrders);
 
-  void navigateToAddShippingAddress() => Get.toNamed(AppRoutes.addShippingAddress);
+  void navigateToAddShippingAddress() =>
+      Get.toNamed(AppRoutes.addShippingAddress);
 
   void navigateToAddPayment() => Get.toNamed(AppRoutes.addPayment);
 
-  void navigateToAddOrder() => Get.toNamed(AppRoutes.addOrder);
+  void navigateToAddOrder({
+    required AddOrderScreenParam param,
+  }) =>
+      Get.toNamed(AppRoutes.addOrder, arguments: param);
 
   void navigateToCongrats() => Get.toNamed(AppRoutes.congrats);
 

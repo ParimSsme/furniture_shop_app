@@ -5,7 +5,6 @@ class PaymentMethodModel extends PaymentMethodEntity {
   const PaymentMethodModel({
     super.id,
     super.image,
-    super.backgroundColor,
     super.cardNumberLastFourDigits,
     super.cardHolderName,
     super.expiryDate,

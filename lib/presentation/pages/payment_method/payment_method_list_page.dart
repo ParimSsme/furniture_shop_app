@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/presentation/pages/payment_method/widgets/payment_card_list_item.dart';
+import 'package:furniture_shop_app/presentation/pages/payment_method/widgets/payment_card_widget.dart';
 import 'package:get/get.dart';
+import '../../../core/widgets/app_check_box.dart';
 import '../../controllers/payment_method/payment_method_list_controller.dart';
 
 class PaymentMethodListPage extends StatelessWidget {
@@ -27,7 +28,7 @@ class PaymentMethodListPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => _controller.goToAddPaymentMethod(),
         child: const Icon(
           Icons.add,
         ),
@@ -39,8 +40,17 @@ class PaymentMethodListPage extends StatelessWidget {
         itemBuilder: (context, index) {
           final paymentItem = _controller.paymentList[index];
 
-          return PaymentCardListItem(
-            entity: paymentItem,
+          return Column(
+            children: [
+              PaymentCardWidget(
+                entity: paymentItem,
+              ),
+              AppCheckBox(
+                value: paymentItem.isSelected,
+                onChanged: (_) {},
+                label: 'Use as default payment method',
+              ),
+            ],
           );
         },
         separatorBuilder: (_, __) => const SizedBox(height: 20),

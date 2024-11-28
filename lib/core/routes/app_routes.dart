@@ -9,12 +9,14 @@ import 'package:furniture_shop_app/presentation/pages/my_cart_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_reviews/my_reviews_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';
+import 'package:furniture_shop_app/presentation/pages/payment_method/add_payment_method_page.dart';
 import 'package:furniture_shop_app/presentation/pages/settings/settings_page.dart';
 import 'package:furniture_shop_app/presentation/pages/shipping_address_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../../presentation/bindings/intro/onboarding_binding.dart';
 import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
+import '../../presentation/bindings/payment_method/add_payment_method_binding.dart';
 import '../../presentation/bindings/product_detail_binding.dart';
 import '../../presentation/pages/main/bottom_navigation.dart';
 import '../../presentation/pages/auth/login_page.dart';
@@ -44,6 +46,7 @@ class AppRoutes {
   static const String profile = '/profile';
   static const String shippingAddress = '/shippingAddress';
   static const String paymentMethod = '/paymentMethod';
+  static const String addPaymentMethod = '/addPaymentMethod';
   static const String myReviews = '/myReviews';
   static const String myOrders = '/myOrders';
   static const String addShippingAddress = '/addShippingAddress';
@@ -114,6 +117,11 @@ class AppRoutes {
       name: paymentMethod,
       page: () => PaymentMethodListPage(),
       binding: PaymentMethodListBinding()
+    ),
+    GetPage(
+      name: addPaymentMethod,
+      page: () => AddPaymentMethodPage(),
+      binding: AddPaymentMethodBinding()
     ),
     GetPage(
       name: shippingAddress,
