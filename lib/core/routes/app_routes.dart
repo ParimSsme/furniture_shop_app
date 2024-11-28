@@ -5,6 +5,7 @@ import 'package:furniture_shop_app/presentation/bindings/my_cart_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/orders/add_order_binding.dart';
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_cart_page.dart';
+import 'package:furniture_shop_app/presentation/pages/my_reviews/my_reviews_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';
 import 'package:furniture_shop_app/presentation/pages/payment_method_page.dart';
@@ -20,9 +21,8 @@ import '../../presentation/pages/auth/signup_page.dart';
 import '../../presentation/pages/intro/boarding_screen.dart';
 import '../../presentation/pages/main/favorites_page.dart';
 import '../../presentation/pages/my_orders_page.dart';
-import '../../features/feature_my_reviews/presentation/screens/my_reviews_screen.dart';
 import '../../presentation/pages/main/notifications_page.dart';
-import '../../presentation/pages/product_detail_page.dart';
+import '../../presentation/pages/product_detail/product_detail_page.dart';
 import '../../presentation/pages/main/profile_page.dart';
 import '../../features/feature_settings/presentation/screens/settings_screen.dart';
 import '../middleware/auth_middleware.dart';
@@ -66,7 +66,7 @@ class AppRoutes {
       ],
     ),
     GetPage(name: myOrders, page: () => MyOrdersPage()),
-    GetPage(name: myReviews, page: () => const MyReviewsScreen()),
+    GetPage(name: myReviews, page: () => const MyReviewsPage()),
     GetPage(name: settings, page: () => const SettingsScreen()),
     GetPage(
       name: profile,
