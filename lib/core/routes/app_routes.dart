@@ -17,6 +17,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../../presentation/bindings/intro/onboarding_binding.dart';
 import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
+import '../../presentation/bindings/my_orders_binding.dart';
 import '../../presentation/bindings/payment_method/add_payment_method_binding.dart';
 import '../../presentation/bindings/product_detail_binding.dart';
 import '../../presentation/bindings/shipping_address/add_shipping_address_binding.dart';
@@ -26,7 +27,7 @@ import '../../presentation/pages/auth/login_page.dart';
 import '../../presentation/pages/auth/signup_page.dart';
 import '../../presentation/pages/intro/boarding_screen.dart';
 import '../../presentation/pages/main/favorites_page.dart';
-import '../../presentation/pages/my_orders_page.dart';
+import '../../presentation/pages/my_orders/my_orders_page.dart';
 import '../../presentation/pages/main/notifications_page.dart';
 import '../../presentation/pages/payment_method/payment_method_list_page.dart';
 import '../../presentation/pages/product_detail/product_detail_page.dart';
@@ -72,7 +73,11 @@ class AppRoutes {
         ProfileBinding(),
       ],
     ),
-    GetPage(name: myOrders, page: () => MyOrdersPage()),
+    GetPage(
+      name: myOrders,
+      page: () => const MyOrdersPage(),
+      binding: MyOrdersBinding(),
+    ),
     GetPage(name: myReviews, page: () => const MyReviewsPage()),
     GetPage(name: settings, page: () => const SettingsPage()),
     GetPage(
@@ -117,24 +122,20 @@ class AppRoutes {
       page: () => const CongratsPage(),
     ),
     GetPage(
-      name: paymentMethod,
-      page: () => PaymentMethodListPage(),
-      binding: PaymentMethodListBinding()
-    ),
+        name: paymentMethod,
+        page: () => PaymentMethodListPage(),
+        binding: PaymentMethodListBinding()),
     GetPage(
-      name: addPaymentMethod,
-      page: () => AddPaymentMethodPage(),
-      binding: AddPaymentMethodBinding()
-    ),
+        name: addPaymentMethod,
+        page: () => AddPaymentMethodPage(),
+        binding: AddPaymentMethodBinding()),
     GetPage(
-      name: shippingAddress,
-      page: () => ShippingAddressListPage(),
-      binding: ShippingAddressListBinding()
-    ),
+        name: shippingAddress,
+        page: () => ShippingAddressListPage(),
+        binding: ShippingAddressListBinding()),
     GetPage(
-      name: addShippingAddress,
-      page: () => AddShippingAddressPage(),
-      binding: AddShippingAddressBinding()
-    ),
+        name: addShippingAddress,
+        page: () => AddShippingAddressPage(),
+        binding: AddShippingAddressBinding()),
   ];
 }

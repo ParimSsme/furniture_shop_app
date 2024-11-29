@@ -109,7 +109,6 @@ final kBodyNunitoTextStyle = _bodyTextStyle.copyWith(
 
 final kBlackNunitoSmallTitleStyle = _smallTitleStyle.copyWith(
   fontFamily: _nunitoSans,
-  fontSize: 14,
 );
 
 final kGreyNunitoSmallTitleStyle = _smallTitleStyle.copyWith(

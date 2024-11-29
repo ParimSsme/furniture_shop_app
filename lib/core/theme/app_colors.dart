@@ -20,6 +20,9 @@ class AppColors {
   static const Color textFiledEnabledFilledColor = Colors.white;
   static const Color textFiledEnabledBorderColor = Color(0xffc8c8c8);
 
+  /// TabBar
+  static const Color tabBarIndicator = Color(0xFF303030);
+
   /// Text Colors
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF808080);

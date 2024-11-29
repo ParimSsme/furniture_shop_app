@@ -1,19 +1,25 @@
-import 'package:furniture_shop_app/domain/entities/furniture_entity.dart';
+import 'package:furniture_shop_app/domain/entities/order_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_entity.dart';
 import '../static/app_constants.dart';
 
 class StaticDataSource {
   const StaticDataSource();
 
-  List<FurnitureEntity> getFurniture() {
-    return AppConstants.furniture;
+  List<ProductEntity> getProducts() {
+    return AppConstants.products;
   }
 
-  FurnitureEntity getFurnitureById({
+  ProductEntity getProductById({
     required int id,
-  }) => AppConstants.furniture.firstWhere((item) => item.id == id);
+  }) => AppConstants.products.firstWhere((item) => item.id == id);
 
-  List<String> getCategorySvgs() {
-    return AppConstants.categorySvgs;
+  List<ProductCategoryEntity> getCategories() {
+    return AppConstants.categories;
+  }
+
+  List<OrderEntity> getOrders() {
+    return AppConstants.orders;
   }
 
   String getAppName() {

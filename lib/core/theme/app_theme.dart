@@ -13,6 +13,18 @@ final ThemeData appThemeData = ThemeData(
 
   scaffoldBackgroundColor: AppColors.background,
 
+  /// TabBar Theme
+  tabBarTheme: TabBarTheme(
+    labelStyle: kBlackNunitoSmallTitleStyle,
+    unselectedLabelStyle: kGreyNunitoSmallTitleStyle,
+    dividerColor: Colors.transparent,
+    indicatorSize: TabBarIndicatorSize.label,
+    indicator: BoxDecoration(
+      color: AppColors.tabBarIndicator,
+      borderRadius: BorderRadius.circular(4.0),
+    ),
+  ),
+
   /// Floating action button
   floatingActionButtonTheme: FloatingActionButtonThemeData(
     backgroundColor: Colors.white,

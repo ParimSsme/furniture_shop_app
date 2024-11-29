@@ -1,4 +1,7 @@
-import 'package:furniture_shop_app/domain/entities/furniture_entity.dart';
+import 'package:furniture_shop_app/domain/entities/order_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_entity.dart';
+
 import '../datasources/static_data_source.dart';
 
 class StaticDataRepository {
@@ -6,17 +9,21 @@ class StaticDataRepository {
 
   StaticDataRepository(this._staticDataSource);
 
-  List<FurnitureEntity> getFurniture() {
-    return _staticDataSource.getFurniture();
+  List<ProductEntity> getProducts() {
+    return _staticDataSource.getProducts();
   }
 
-  FurnitureEntity getFurnitureById({
+  ProductEntity getProductById({
     required int id,
-  }) => _staticDataSource.getFurnitureById(id: id);
+  }) => _staticDataSource.getProductById(id: id);
 
 
-  List<String> getCategorySvgs() {
-    return _staticDataSource.getCategorySvgs();
+  List<ProductCategoryEntity> getCategories() {
+    return _staticDataSource.getCategories();
+  }
+
+  List<OrderEntity> getOrders() {
+    return _staticDataSource.getOrders();
   }
 
   String getAppName() {
