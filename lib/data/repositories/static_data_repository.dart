@@ -1,3 +1,4 @@
+import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:furniture_shop_app/domain/entities/order_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_entity.dart';
@@ -24,6 +25,10 @@ class StaticDataRepository {
 
   List<OrderEntity> getOrders() {
     return _staticDataSource.getOrders();
+  }
+
+  List<NotificationEntity> getNotifications() {
+    return _staticDataSource.getNotifications();
   }
 
   String getAppName() {

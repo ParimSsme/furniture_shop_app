@@ -18,6 +18,7 @@ import '../../presentation/bindings/intro/onboarding_binding.dart';
 import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
 import '../../presentation/bindings/my_orders_binding.dart';
+import '../../presentation/bindings/notifications_binding.dart';
 import '../../presentation/bindings/payment_method/add_payment_method_binding.dart';
 import '../../presentation/bindings/product_detail_binding.dart';
 import '../../presentation/bindings/shipping_address/add_shipping_address_binding.dart';
@@ -70,6 +71,7 @@ class AppRoutes {
       bindings: [
         HomeBinding(),
         FavoritesBinding(),
+        NotificationsBinding(),
         ProfileBinding(),
       ],
     ),

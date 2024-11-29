@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
 import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
 import 'package:furniture_shop_app/core/enums/order_state.dart';
+import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:furniture_shop_app/domain/entities/order_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_entity.dart';
@@ -12,14 +13,85 @@ class AppConstants {
   static const String defaultLanguage = "en";
 
   static const List<ProductCategoryEntity> categories = [
-    ProductCategoryEntity(id: 0, image: AppIconAssets.popular,),
-    ProductCategoryEntity(id: 1, image: AppIconAssets.chair,),
-    ProductCategoryEntity(id: 2, image: AppIconAssets.table,),
-    ProductCategoryEntity(id: 3, image: AppIconAssets.armchair,),
-    ProductCategoryEntity(id: 4, image: AppIconAssets.bed,),
-    ProductCategoryEntity(id: 5, image: AppIconAssets.lamp,),
+    ProductCategoryEntity(
+      id: 0,
+      image: AppIconAssets.popular,
+    ),
+    ProductCategoryEntity(
+      id: 1,
+      image: AppIconAssets.chair,
+    ),
+    ProductCategoryEntity(
+      id: 2,
+      image: AppIconAssets.table,
+    ),
+    ProductCategoryEntity(
+      id: 3,
+      image: AppIconAssets.armchair,
+    ),
+    ProductCategoryEntity(
+      id: 4,
+      image: AppIconAssets.bed,
+    ),
+    ProductCategoryEntity(
+      id: 5,
+      image: AppIconAssets.lamp,
+    ),
   ];
 
+  /// Notifications static data
+  static List<NotificationEntity> notifications = const [
+    NotificationEntity(
+      id: 1,
+      image: AppImageAssets.desk2,
+      title: 'Your order #123456789 has been confirmed',
+      description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec. ',
+      isNew: true,
+    ),
+    NotificationEntity(
+      id: 2,
+      image: AppImageAssets.lamp5,
+      title: 'Your order #123456789 has been canceled',
+      description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec. ',
+    ),
+    NotificationEntity(
+      id: 3,
+      title: 'Discover hot sale furnitures this week.',
+      description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec. ',
+      isHot: true,
+    ),
+    NotificationEntity(
+      id: 4,
+      image: AppImageAssets.desk1,
+      title: 'Your order #123456789 has been shipped successfully',
+      description:
+          'Please help us to confirm and rate your order to get 10% discount code for next order. ',
+    ),
+    NotificationEntity(
+      id: 4,
+      image: AppImageAssets.desk1,
+      title: 'Your order #123456789 has been confirmed',
+      description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec.  ',
+    ),
+    NotificationEntity(
+      id: 4,
+      image: AppImageAssets.desk1,
+      title: 'Your order #123456789 has been canceled',
+      description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec.  ',
+    ),
+    NotificationEntity(
+      id: 4,
+      image: AppImageAssets.desk1,
+      title: 'Your order #123456789 has been shipped successfully',
+      description:
+          'Please help us to confirm and rate your order to get 10% discount code for next order. ',
+    ),
+  ];
 
   /// Orders static data
   static List<OrderEntity> orders = const [
@@ -68,7 +140,7 @@ class AppConstants {
       name: 'Black Simple Lamp',
       images: {
         Colors.grey: const [
-          AppImageAssets.blackSimpleLamp,
+          AppImageAssets.lamp1,
         ],
       },
       description:
@@ -89,7 +161,7 @@ class AppConstants {
       name: 'Minimal Stand',
       images: {
         Colors.grey: const [
-          AppImageAssets.minimalStand,
+          AppImageAssets.chair2,
         ],
       },
       description:
@@ -110,7 +182,7 @@ class AppConstants {
       name: 'Coffee Chair',
       images: {
         Colors.grey: const [
-          AppImageAssets.coffeeChair,
+          AppImageAssets.chair2,
         ],
       },
       description:
@@ -130,7 +202,7 @@ class AppConstants {
       name: 'Simple Desk',
       images: {
         Colors.grey: const [
-          AppImageAssets.simpleDesk,
+          AppImageAssets.chair2,
         ],
       },
       description:
@@ -153,7 +225,7 @@ class AppConstants {
       name: 'Chair',
       images: {
         Colors.grey: const [
-          AppImageAssets.simpleDesk,
+          AppImageAssets.chair2,
         ],
       },
       description:
@@ -180,7 +252,7 @@ class AppConstants {
         ],
       },
       description:
-      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -201,7 +273,7 @@ class AppConstants {
         ],
       },
       description:
-      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -222,7 +294,7 @@ class AppConstants {
         ],
       },
       description:
-      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -243,7 +315,7 @@ class AppConstants {
         ],
       },
       description:
-      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -255,5 +327,4 @@ class AppConstants {
       ],
     ),
   ];
-
 }

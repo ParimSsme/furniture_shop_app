@@ -1,68 +1,39 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
+import 'package:furniture_shop_app/presentation/controllers/notifications_controller.dart';
+import 'package:furniture_shop_app/presentation/pages/main/widgets/notification_list_item.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
-import '../../../core/routes/app_routes.dart';
-import '../../../core/services/navigation_service.dart';
-
-class NotificationsPage extends StatelessWidget {
+class NotificationsPage extends GetView<NotificationsController> {
   const NotificationsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-                Text('Notification', style: kBlackNunitoSmallTitleStyle),
-                const SizedBox(width: 50),
-              ],
-            ),
-            Expanded(
-              child: ListView.separated(
-                padding: const EdgeInsets.all(8),
-                scrollDirection: Axis.vertical,
-                itemCount: 5,
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () {
-                      NavigationService.to.navigateToProductDetail(id: 0);
-                    },
-                    child: Row(
-                      children: [
-                        Image.asset('assets/images/item1.jpg', height: 100, width: 100,),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Text('T', style: kBodyNunitoTextStyle),
-                            Text('\$12', style: kBlackNunitoSmallTitleStyle),
-                          ],
-                        ),
-                        const Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(onPressed: (){}, icon: const Icon(Icons.cancel_outlined)),
-                            IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_bag)),
-                          ],
-                        )
-                      ],
-                    ),
-                  );
-                },
-                separatorBuilder: (BuildContext context, int index) =>
-                    const SizedBox(
-                  height: 10,
-                ),
-              ),
-            )
-          ],
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: (){},
+          icon: SvgPicture.asset(AppIconAssets.search),
+        ),
+        centerTitle: true,
+        title: const Text(
+          "Notification",
+        ),
+      ),
+      body: ListView.separated(
+        itemCount: controller.notifications.length,
+        physics: const BouncingScrollPhysics(),
+        itemBuilder: (context, index) {
+          return NotificationListItem(
+            entity: controller.notifications[index],
+          );
+        },
+        separatorBuilder: (_, __) => Divider(
+          indent: 24,
+          endIndent: 24,
+          thickness: 1,
+          color: Colors.grey.shade300,
         ),
       ),
     );
