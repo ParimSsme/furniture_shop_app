@@ -44,6 +44,7 @@ dependencies:
   get_storage:
   awesome_snackbar_content:
   country_picker_plus: ^2.0.2
+  flutter_rating_bar:
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,12 @@ flutter:
   assets:
     - assets/images/
     - assets/images/lamps/
+    - assets/images/armchairs/armchair1/
+    - assets/images/chairs/chair1/
+    - assets/images/chairs/
+    - assets/images/chairs/chair1/black/
+    - assets/images/chairs/chair1/light_pink/
+    - assets/images/desks/
     - assets/icons/
   #   - images/a_dot_ham.jpeg
 

@@ -68,7 +68,7 @@ class ProductDetailController extends GetxController {
   void reduceProductCount() => _productCount.value--;
 
   void navigateToProductReviewScreen() {
-
+    AppNavigator.to.navigateToProductReview();
   }
 
   void onAddToCart() {

@@ -20,6 +20,8 @@ class AppNavigator {
   }) =>
       Get.toNamed(AppRoutes.productDetail, arguments: id);
 
+  void navigateToProductReview() => Get.toNamed(AppRoutes.productReview);
+
   void navigateToFavorites() => Get.toNamed(AppRoutes.favorites);
 
   void navigateToMyCart() => Get.toNamed(AppRoutes.myCart);
@@ -55,5 +57,4 @@ class AppNavigator {
       Get.toNamed(AppRoutes.addOrder, arguments: param);
 
   void navigateToCongrats() => Get.toNamed(AppRoutes.congrats);
-
 }

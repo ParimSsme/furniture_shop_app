@@ -6,6 +6,7 @@ import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:furniture_shop_app/domain/entities/order_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_review_entity.dart';
 
 class AppConstants {
   // Sample constants
@@ -132,6 +133,37 @@ class AppConstants {
     )
   ];
 
+  /// Product Reviews static data
+  static List<ProductReviewEntity> reviews = const [
+    ProductReviewEntity(
+      id: 0,
+      reviewerName: 'Bruno Fernandes',
+      reviewerImage: AppImageAssets.bruno2,
+      rate: 3.5,
+      date: '20/03/2020',
+      review:
+          'Nice Furniture with good delivery. The delivery time is very fast. Then products look like exactly the picture in the app. Besides, color is also the same and quality is very good despite very cheap price',
+    ),
+    ProductReviewEntity(
+      id: 0,
+      reviewerName: 'Tracy Mosby',
+      reviewerImage: AppImageAssets.tracy,
+      rate: 5,
+      date: '20/03/2020',
+      review:
+          'Nice Furniture with good delivery. The delivery time is very fast. Then products look like exactly the picture in the app. Besides, color is also the same and quality is very good despite very cheap price',
+    ),
+    ProductReviewEntity(
+      id: 0,
+      reviewerName: 'Bruno Fernandes',
+      reviewerImage: AppImageAssets.bruno1,
+      rate: 4,
+      date: '20/03/2020',
+      review:
+          'Nice Furniture with good delivery. The delivery time is very fast. Then products look like exactly the picture in the app. Besides, color is also the same and quality is very good despite very cheap price',
+    ),
+  ];
+
   /// Products static data
   static List<ProductEntity> products = [
     ProductEntity(
@@ -149,15 +181,10 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
-      colors: [
-        Colors.amber,
-        Colors.grey,
-        Colors.blueGrey,
-      ],
     ),
     ProductEntity(
       id: 1,
-      categoryId: 1,
+      categoryId: 0,
       name: 'Minimal Stand',
       images: {
         Colors.grey: const [
@@ -170,11 +197,6 @@ class AppConstants {
       rate: 4.5,
       reviews: 50,
       isFavourite: false,
-      colors: [
-        Colors.white,
-        Color(0xffb4916c),
-        Color(0xffe4cbad),
-      ],
     ),
     ProductEntity(
       id: 2,
@@ -191,10 +213,6 @@ class AppConstants {
       rate: 5,
       reviews: 120,
       isFavourite: true,
-      colors: [
-        Colors.blueAccent,
-        Colors.amber,
-      ],
     ),
     ProductEntity(
       id: 3,
@@ -211,14 +229,33 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
-      colors: [
-        Colors.deepPurpleAccent,
-        Colors.grey,
-        Colors.blueGrey,
-      ],
     ),
 
     /// Chairs
+    ProductEntity(
+      id: 4,
+      categoryId: 1,
+      name: 'Chair',
+      images: {
+        Colors.black: const [
+          AppImageAssets.chair1Black_1,
+          AppImageAssets.chair1Black_2,
+          AppImageAssets.chair1Black_3,
+          AppImageAssets.chair1Black_4,
+        ],
+        const Color(0xffe3d7d7): const [
+          AppImageAssets.chair1Pink_1,
+          AppImageAssets.chair1Pink_2,
+          AppImageAssets.chair1Pink_3,
+        ],
+      },
+      description:
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+      isFavourite: true,
+    ),
     ProductEntity(
       id: 4,
       categoryId: 1,
@@ -234,11 +271,6 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
-      colors: [
-        Colors.deepPurpleAccent,
-        Colors.grey,
-        Colors.blueGrey,
-      ],
     ),
 
     /// Lamps
@@ -257,11 +289,6 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
-      colors: [
-        Colors.deepPurpleAccent,
-        Colors.grey,
-        Colors.blueGrey,
-      ],
     ),
     ProductEntity(
       id: 6,
@@ -278,11 +305,6 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
-      colors: [
-        Colors.deepPurpleAccent,
-        Colors.grey,
-        Colors.blueGrey,
-      ],
     ),
     ProductEntity(
       id: 6,
@@ -299,11 +321,6 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
-      colors: [
-        Colors.deepPurpleAccent,
-        Colors.grey,
-        Colors.blueGrey,
-      ],
     ),
     ProductEntity(
       id: 6,
@@ -320,11 +337,6 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
-      colors: [
-        Colors.deepPurpleAccent,
-        Colors.grey,
-        Colors.blueGrey,
-      ],
     ),
   ];
 }

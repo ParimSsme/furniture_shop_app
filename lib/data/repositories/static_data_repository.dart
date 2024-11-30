@@ -2,6 +2,7 @@ import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:furniture_shop_app/domain/entities/order_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_review_entity.dart';
 
 import '../datasources/static_data_source.dart';
 
@@ -25,6 +26,10 @@ class StaticDataRepository {
 
   List<OrderEntity> getOrders() {
     return _staticDataSource.getOrders();
+  }
+
+  List<ProductReviewEntity> getReviews() {
+    return _staticDataSource.getReviews();
   }
 
   List<NotificationEntity> getNotifications() {

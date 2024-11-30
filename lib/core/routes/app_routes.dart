@@ -4,12 +4,14 @@ import 'package:furniture_shop_app/presentation/bindings/main/profile_binding.da
 import 'package:furniture_shop_app/presentation/bindings/my_cart_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/orders/add_order_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/payment_method/payment_method_list_binding.dart';
+import 'package:furniture_shop_app/presentation/bindings/product_review_binding.dart';
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_cart_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_reviews/my_reviews_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';
 import 'package:furniture_shop_app/presentation/pages/payment_method/add_payment_method_page.dart';
+import 'package:furniture_shop_app/presentation/pages/product_review/product_review_page.dart';
 import 'package:furniture_shop_app/presentation/pages/settings/settings_page.dart';
 import 'package:furniture_shop_app/presentation/pages/shipping_address/add_shipping_address_page.dart';
 import 'package:furniture_shop_app/presentation/pages/shipping_address/shipping_address_list_page.dart';
@@ -42,6 +44,7 @@ class AppRoutes {
   static const String signUp = '/signUp';
   static const String home = '/home';
   static const String productDetail = '/productDetail';
+  static const String productReview = '/productReview';
   static const String favorites = '/favorites';
   static const String myCart = '/my_cart';
   static const String checkOut = '/checkOut';
@@ -93,6 +96,11 @@ class AppRoutes {
       name: productDetail,
       page: () => const ProductDetailPage(),
       binding: ProductDetailBinding(),
+    ),
+    GetPage(
+      name: productReview,
+      page: () => const ProductReviewPage(),
+      binding: ProductReviewBinding(),
     ),
     GetPage(
       name: onboarding,
