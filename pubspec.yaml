@@ -79,7 +79,8 @@ flutter:
     - assets/images/chairs/
     - assets/images/chairs/chair1/black/
     - assets/images/chairs/chair1/light_pink/
-    - assets/images/desks/
+    - assets/images/tables/
+    - assets/images/tables/table1/
     - assets/icons/
   #   - images/a_dot_ham.jpeg
 

@@ -44,7 +44,7 @@ class AppConstants {
   static List<NotificationEntity> notifications = const [
     NotificationEntity(
       id: 1,
-      image: AppImageAssets.desk2,
+      image: AppImageAssets.table2,
       title: 'Your order #123456789 has been confirmed',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec. ',
@@ -66,28 +66,28 @@ class AppConstants {
     ),
     NotificationEntity(
       id: 4,
-      image: AppImageAssets.desk1,
+      image: AppImageAssets.table2,
       title: 'Your order #123456789 has been shipped successfully',
       description:
           'Please help us to confirm and rate your order to get 10% discount code for next order. ',
     ),
     NotificationEntity(
       id: 4,
-      image: AppImageAssets.desk1,
+      image: AppImageAssets.table3,
       title: 'Your order #123456789 has been confirmed',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec.  ',
     ),
     NotificationEntity(
       id: 4,
-      image: AppImageAssets.desk1,
+      image: AppImageAssets.table4,
       title: 'Your order #123456789 has been canceled',
       description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis pretium et in arcu adipiscing nec. Turpis pretium et in arcu adipiscing nec.  ',
     ),
     NotificationEntity(
       id: 4,
-      image: AppImageAssets.desk1,
+      image: AppImageAssets.table1_1,
       title: 'Your order #123456789 has been shipped successfully',
       description:
           'Please help us to confirm and rate your order to get 10% discount code for next order. ',
@@ -167,7 +167,7 @@ class AppConstants {
   /// Products static data
   static List<ProductEntity> products = [
 
-    /* Chairs */
+    /* Chairs ***/
     ProductEntity(
       id: 1,
       categoryId: 1,
@@ -209,13 +209,16 @@ class AppConstants {
       reviews: 100,
     ),
 
+    /* Desks ***/
     ProductEntity(
-      id: 0,
-      categoryId: 0,
-      name: 'Black Simple Lamp',
+      id: 3,
+      categoryId: 2,
+      name: 'Table',
       images: {
-        Colors.grey: const [
-          AppImageAssets.lamp1,
+        Colors.brown: const [
+          AppImageAssets.table1_1,
+          AppImageAssets.table1_2,
+          AppImageAssets.table1_3,
         ],
       },
       description:
@@ -224,54 +227,82 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
+      isPopular: true,
     ),
     ProductEntity(
-      id: 1,
-      categoryId: 0,
-      name: 'Minimal Stand',
-      images: {
-        Colors.grey: const [
-          AppImageAssets.chair2,
-        ],
-      },
-      description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
-      price: 25,
-      rate: 4.5,
-      reviews: 50,
-      isFavourite: false,
-    ),
-    ProductEntity(
-      id: 2,
+      id: 4,
       categoryId: 2,
-      name: 'Coffee Chair',
+      name: 'Table',
       images: {
-        Colors.grey: const [
-          AppImageAssets.chair2,
+        Colors.brown: const [
+          AppImageAssets.table2,
         ],
       },
       description:
           'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
-      price: 20,
-      rate: 5,
-      reviews: 120,
-      isFavourite: true,
-    ),
-    ProductEntity(
-      id: 3,
-      categoryId: 4,
-      name: 'Simple Desk',
-      images: {
-        Colors.grey: const [
-          AppImageAssets.chair2,
-        ],
-      },
-      description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
-      price: 50,
+      price: 12,
       rate: 3.9,
       reviews: 100,
-      isFavourite: true,
+    ),
+    ProductEntity(
+      id: 5,
+      categoryId: 2,
+      name: 'Table',
+      images: {
+        Colors.white: const [
+          AppImageAssets.table3,
+        ],
+      },
+      description:
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+      price: 12,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 6,
+      categoryId: 2,
+      name: 'Table',
+      images: {
+        Colors.brown: const [
+          AppImageAssets.table4,
+        ],
+      },
+      description:
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+      price: 12,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 7,
+      categoryId: 2,
+      name: 'Table',
+      images: {
+        Colors.brown: const [
+          AppImageAssets.table5,
+        ],
+      },
+      description:
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+      price: 12,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 8,
+      categoryId: 2,
+      name: 'Table',
+      images: {
+        Colors.brown: const [
+          AppImageAssets.table6,
+        ],
+      },
+      description:
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+      price: 12,
+      rate: 3.9,
+      reviews: 100,
     ),
 
 
