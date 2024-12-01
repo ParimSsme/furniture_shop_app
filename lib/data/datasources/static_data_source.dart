@@ -1,3 +1,4 @@
+import 'package:furniture_shop_app/domain/entities/favourite_entity.dart';
 import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:furniture_shop_app/domain/entities/order_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
@@ -26,6 +27,10 @@ class StaticDataSource {
 
   List<ProductReviewEntity> getReviews() {
     return AppConstants.reviews;
+  }
+
+  List<FavouriteEntity> getFavourites() {
+    return AppConstants.favourites;
   }
 
   List<NotificationEntity> getNotifications() {

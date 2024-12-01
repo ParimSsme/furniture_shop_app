@@ -84,6 +84,5 @@ class ProductDetailController extends GetxController {
   }
 
   void onAddToFavorite() {
-    _localDataRepository.addFavorite(id: furniture.id);
   }
 }

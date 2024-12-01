@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
 import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
 import 'package:furniture_shop_app/core/enums/order_state.dart';
+import 'package:furniture_shop_app/domain/entities/favourite_entity.dart';
 import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:furniture_shop_app/domain/entities/order_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
@@ -161,6 +162,45 @@ class AppConstants {
       date: '20/03/2020',
       review:
           'Nice Furniture with good delivery. The delivery time is very fast. Then products look like exactly the picture in the app. Besides, color is also the same and quality is very good despite very cheap price',
+    ),
+  ];
+
+  /// Favourites static data
+  static List<FavouriteEntity> favourites = const [
+    FavouriteEntity(
+      id: 1,
+      name: 'Minimal Stand',
+      productId: 5,
+      price: 50,
+      image: AppImageAssets.table3,
+    ),
+    FavouriteEntity(
+      id: 2,
+      productId: 19,
+      price: 20,
+      name: 'Minimal Lamp',
+      image: AppImageAssets.lamp1,
+    ),
+    FavouriteEntity(
+      id: 3,
+      productId: 15,
+      name: 'Bed',
+      price: 500,
+      image: AppImageAssets.bed3_1,
+    ),
+    FavouriteEntity(
+      id: 4,
+      productId: 9,
+      name: 'Armchair',
+      price: 100,
+      image: AppImageAssets.armchair1Yellow_3,
+    ),
+    FavouriteEntity(
+      id: 5,
+      productId: 20,
+      name: 'Lamp',
+      price: 20,
+      image: AppImageAssets.lamp2,
     ),
   ];
 
@@ -411,7 +451,7 @@ class AppConstants {
         ],
       },
       description:
-      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+          'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -435,7 +475,7 @@ class AppConstants {
         ],
       },
       description:
-      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+          'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -456,7 +496,7 @@ class AppConstants {
         ],
       },
       description:
-      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+          'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -471,7 +511,7 @@ class AppConstants {
         ],
       },
       description:
-      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+          'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -486,7 +526,7 @@ class AppConstants {
         ],
       },
       description:
-      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+          'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -501,7 +541,7 @@ class AppConstants {
         ],
       },
       description:
-      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+          'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -518,7 +558,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -535,7 +575,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -550,7 +590,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -565,7 +605,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -580,7 +620,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -595,7 +635,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -610,7 +650,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -625,7 +665,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -640,7 +680,7 @@ class AppConstants {
         ],
       },
       description:
-      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+          'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
       price: 50,
       rate: 3.9,
       reviews: 100,

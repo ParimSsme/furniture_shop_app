@@ -29,7 +29,7 @@ import '../../presentation/pages/main/bottom_navigation.dart';
 import '../../presentation/pages/auth/login_page.dart';
 import '../../presentation/pages/auth/signup_page.dart';
 import '../../presentation/pages/intro/boarding_screen.dart';
-import '../../presentation/pages/main/favorites_page.dart';
+import '../../presentation/pages/main/favourites/favorites_page.dart';
 import '../../presentation/pages/my_orders/my_orders_page.dart';
 import '../../presentation/pages/main/notifications_page.dart';
 import '../../presentation/pages/payment_method/payment_method_list_page.dart';

@@ -1,55 +1,39 @@
-import 'package:furniture_shop_app/data/datasources/local_data_source.dart';
-import 'package:furniture_shop_app/data/repositories/local_data_repository.dart';
-import 'package:furniture_shop_app/domain/entities/furniture_entity.dart';
-import 'package:furniture_shop_app/domain/entities/my_cart_entity.dart';
+import 'package:furniture_shop_app/domain/entities/favourite_entity.dart';
 import 'package:get/get.dart';
+import '../../../core/utils/app_navigator.dart';
+import '../../../data/datasources/static_data_source.dart';
+import '../../../data/repositories/static_data_repository.dart';
 
 class FavoritesController extends GetxController {
   static FavoritesController get to => Get.find();
 
-  final LocalDataRepository _localDataRepository;
+  final StaticDataRepository _staticDataRepository;
 
   FavoritesController()
-      : _localDataRepository = LocalDataRepository(LocalDataSource());
+      : _staticDataRepository = StaticDataRepository(const StaticDataSource());
 
-  // Static data
-  final favorites = <FurnitureEntity>[].obs;
+  /// Static data
+  late List<FavouriteEntity> _favourites = <FavouriteEntity>[];
+  late RxList<FavouriteEntity> favourites = <FavouriteEntity>[].obs;
 
-  void loadData() {
-    _getFavorites();
+  @override
+  void onInit() {
+    super.onInit();
+    loadStaticData();
   }
 
-  void _getFavorites() {
-    favorites.assignAll(_localDataRepository.getFavorites());
+  void loadStaticData() {
+    _favourites = List.unmodifiable(_staticDataRepository.getFavourites());
+    favourites(_favourites);
   }
 
-  FurnitureEntity _findFavoriteById({
+  void onItemClick({
     required int id,
-  }) {
-    return favorites.firstWhere((favorite) => favorite.id == id);
-  }
+  }) =>
+      AppNavigator.to.navigateToProductDetail(id: id);
 
-  void removeFavorite({
-    required int id,
-  }) {
-    _localDataRepository.removeFavorite(id: _findFavoriteById(id: id).id);
-    _getFavorites();
-  }
+  void addAllFavoritesToMyCart() => AppNavigator.to.navigateToMyCart();
 
-  void addAllFavoritesToMyCart() {
-    for (var favorite in favorites) {
-      bool isMyCart = _localDataRepository.isMyCart(id: favorite.id);
-      if (!isMyCart) {
-        _localDataRepository.addMyCart(
-          cartEntity: MyCartEntity(
-            id: favorite.id,
-            image: favorite.image,
-            name: favorite.name,
-            price: favorite.price,
-            productCount: 1
-          ),
-        );
-      }
-    }
-  }
+  void onMyCartClick() => AppNavigator.to.navigateToMyCart();
+
 }
