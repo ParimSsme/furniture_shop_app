@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import 'package:furniture_shop_app/core/extensions/widget_extension.dart';
 import 'package:furniture_shop_app/presentation/controllers/main/home_controller.dart';
-import '../../widgets/main/home/category_list.dart';
-import '../../widgets/main/home/furniture_list.dart';
+import 'package:furniture_shop_app/presentation/pages/main/home/widgets/products_list.dart';
+import '../../../../core/theme/app_text_theme.dart';
+import 'widgets/category_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
 
             /// Furniture List
             const Expanded(
-              child: FurnitureList(),
+              child: ProductsList(),
             )
           ],
         ).defaultScreenPadding(),

@@ -1,10 +1,7 @@
-import 'dart:ffi';
-
-import 'package:furniture_shop_app/domain/entities/furniture_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
+import 'package:furniture_shop_app/domain/entities/product_entity.dart';
 import 'package:get/get.dart';
-
-import '../../../core/routes/app_routes.dart';
-import '../../../core/services/navigation_service.dart';
+import '../../../core/utils/app_navigator.dart';
 import '../../../data/datasources/static_data_source.dart';
 import '../../../data/repositories/static_data_repository.dart';
 
@@ -14,16 +11,15 @@ class HomeController extends GetxController {
   final StaticDataRepository _staticDataRepository;
 
   HomeController()
-      : _staticDataRepository = StaticDataRepository(StaticDataSource());
+      : _staticDataRepository = StaticDataRepository(const StaticDataSource());
 
   /// Static data
-  var furniture = <FurnitureEntity>[].obs;
-  var categorySvgs = <String>[].obs;
+  late List<ProductEntity> _products = <ProductEntity>[];
+  late RxList<ProductEntity> products = <ProductEntity>[].obs;
+  var categories = <ProductCategoryEntity>[].obs;
   final _selectedCategoryIndex = 0.obs;
 
   get selectedCategoryIndex => _selectedCategoryIndex.value;
-
-  void changeSelectedCategory(index) => _selectedCategoryIndex.value = index;
 
   @override
   void onInit() {
@@ -32,15 +28,23 @@ class HomeController extends GetxController {
   }
 
   void loadStaticData() {
-    furniture.value = _staticDataRepository.getFurniture();
-    categorySvgs.value = _staticDataRepository.getCategorySvgs();
+    _products = List.unmodifiable(_staticDataRepository.getProducts());
+    products(_products.where((element) => element.isPopular == true).toList());
+    categories.value = _staticDataRepository.getCategories();
+  }
+
+  void filterProducts(int index) {
+    _selectedCategoryIndex.value = index;
+    products.value = index == 0
+        ? _products.where((element) => element.isPopular == true).toList()
+        : _products.where((element) => element.categoryId == index).toList();
+    products.refresh();
   }
 
   void onItemClick({
     required int id,
   }) =>
-      NavigationService.to.navigateToProductDetail(id: id);
+      AppNavigator.to.navigateToProductDetail(id: id);
 
-  void onMyCartClick () => NavigationService.to.navigateToMyCart();
-
+  void onMyCartClick() => AppNavigator.to.navigateToMyCart();
 }
