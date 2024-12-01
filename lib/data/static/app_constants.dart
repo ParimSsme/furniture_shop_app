@@ -166,7 +166,6 @@ class AppConstants {
 
   /// Products static data
   static List<ProductEntity> products = [
-
     /* Chairs ***/
     ProductEntity(
       id: 1,
@@ -186,7 +185,7 @@ class AppConstants {
         ],
       },
       description:
-      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -203,7 +202,7 @@ class AppConstants {
         ],
       },
       description:
-      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
       price: 50,
       rate: 3.9,
       reviews: 100,
@@ -305,72 +304,90 @@ class AppConstants {
       reviews: 100,
     ),
 
-
-
-    /// Lamps
+    /* Armchairs ***/
     ProductEntity(
-      id: 5,
-      categoryId: 5,
-      name: 'Lamp',
+      id: 9,
+      categoryId: 3,
+      name: 'Armchair',
       images: {
-        Colors.grey: const [
-          AppImageAssets.lamp1,
+        const Color(0xff007263): const [
+          AppImageAssets.armchair1Green_1,
+          AppImageAssets.armchair1Green_2,
+          AppImageAssets.armchair1Green_3,
+        ],
+        const Color(0xffe7c56c): const [
+          AppImageAssets.armchair1Yellow_1,
+          AppImageAssets.armchair1Yellow_2,
+          AppImageAssets.armchair1Yellow_3,
+        ],
+        const Color(0xff85b1c5): const [
+          AppImageAssets.armchair1_2,
+        ],
+        const Color(0xff2aa6be): const [
+          AppImageAssets.armchair1_3,
+        ],
+        const Color(0xff75c6ca): const [
+          AppImageAssets.armchair1_4,
         ],
       },
       description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'This armchair offers the perfect balance of comfort and elegance. Its plush cushioning and ergonomic design provide exceptional support for relaxing. The sturdy frame and high-quality upholstery ensure durability, while the timeless design enhances any room’s decor. Ideal for lounging, reading, or adding a cozy touch to your space.',
       price: 50,
       rate: 3.9,
       reviews: 100,
       isFavourite: true,
+      isPopular: true,
     ),
     ProductEntity(
-      id: 6,
-      categoryId: 5,
-      name: 'Lamp',
+      id: 10,
+      categoryId: 3,
+      name: 'Armchair',
       images: {
-        Colors.grey: const [
-          AppImageAssets.lamp2,
+        const Color(0xffebb9b2): const [
+          AppImageAssets.armchair2Pink_1,
+          AppImageAssets.armchair2Pink_2,
+          AppImageAssets.armchair2Pink_3,
+        ],
+        const Color(0xffa1348d): const [
+          AppImageAssets.armchair2_2,
         ],
       },
       description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'This armchair offers the perfect balance of comfort and elegance. Its plush cushioning and ergonomic design provide exceptional support for relaxing. The sturdy frame and high-quality upholstery ensure durability, while the timeless design enhances any room’s decor. Ideal for lounging, reading, or adding a cozy touch to your space.',
       price: 50,
       rate: 3.9,
       reviews: 100,
-      isFavourite: true,
     ),
     ProductEntity(
-      id: 6,
-      categoryId: 5,
-      name: 'Lamp',
+      id: 11,
+      categoryId: 3,
+      name: 'Armchair',
       images: {
-        Colors.grey: const [
-          AppImageAssets.lamp3,
+        const Color(0xffdcc9cb): const [
+          AppImageAssets.armchair3_1,
+          AppImageAssets.armchair3_2,
         ],
       },
       description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'This armchair offers the perfect balance of comfort and elegance. Its plush cushioning and ergonomic design provide exceptional support for relaxing. The sturdy frame and high-quality upholstery ensure durability, while the timeless design enhances any room’s decor. Ideal for lounging, reading, or adding a cozy touch to your space.',
       price: 50,
       rate: 3.9,
       reviews: 100,
-      isFavourite: true,
     ),
     ProductEntity(
-      id: 6,
-      categoryId: 5,
-      name: 'Lamp',
+      id: 12,
+      categoryId: 3,
+      name: 'Armchair',
       images: {
-        Colors.grey: const [
-          AppImageAssets.lamp4,
+        Colors.black: const [
+          AppImageAssets.armchair4,
         ],
       },
       description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+          'This armchair offers the perfect balance of comfort and elegance. Its plush cushioning and ergonomic design provide exceptional support for relaxing. The sturdy frame and high-quality upholstery ensure durability, while the timeless design enhances any room’s decor. Ideal for lounging, reading, or adding a cozy touch to your space.',
       price: 50,
       rate: 3.9,
       reviews: 100,
-      isFavourite: true,
     ),
   ];
 }

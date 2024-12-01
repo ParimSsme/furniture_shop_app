@@ -34,6 +34,28 @@ class AppImageAssets {
   static const String table5 = '$_basePath/tables/table5.jpg';
   static const String table6 = '$_basePath/tables/table6.jpg';
 
+  /// Armchairs
+  /* Armchair 1 ***/
+  static const String armchair1Green_1 = '$_basePath/armchairs/armchair1/green/armchair1_green_1.jpg';
+  static const String armchair1Green_2 = '$_basePath/armchairs/armchair1/green/armchair1_green_2.jpg';
+  static const String armchair1Green_3 = '$_basePath/armchairs/armchair1/green/armchair1_green_3.jpg';
+  static const String armchair1Yellow_1 = '$_basePath/armchairs/armchair1/yellow/armchair1_yellow_1.jpg';
+  static const String armchair1Yellow_2 = '$_basePath/armchairs/armchair1/yellow/armchair1_yellow_2.jpg';
+  static const String armchair1Yellow_3 = '$_basePath/armchairs/armchair1/yellow/armchair1_yellow_3.jpg';
+  static const String armchair1_2 = '$_basePath/armchairs/armchair1/armchair1_2.jpg';
+  static const String armchair1_3 = '$_basePath/armchairs/armchair1/armchair1_3.jpg';
+  static const String armchair1_4 = '$_basePath/armchairs/armchair1/armchair1_4.jpg';
+  /* Armchair 2 ***/
+  static const String armchair2Pink_1 = '$_basePath/armchairs/armchair2/pink/armchair2_pink_1.jpg';
+  static const String armchair2Pink_2 = '$_basePath/armchairs/armchair2/pink/armchair2_pink_2.jpg';
+  static const String armchair2Pink_3 = '$_basePath/armchairs/armchair2/pink/armchair2_pink_3.jpg';
+  static const String armchair2_2 = '$_basePath/armchairs/armchair2/armchair2_2.jpg';
+  /* Armchair 3 ***/
+  static const String armchair3_1 = '$_basePath/armchairs/armchair3/armchair3_1.jpg';
+  static const String armchair3_2 = '$_basePath/armchairs/armchair3/armchair3_2.jpg';
+  /* Armchair 4 ***/
+  static const String armchair4 = '$_basePath/armchairs/armchair4.jpg';
+
   /// Lamps
   static const String lamp1 = '$_basePath/lamps/lamp1.jpg';
   static const String lamp2 = '$_basePath/lamps/lamp2.jpg';

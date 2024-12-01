@@ -74,13 +74,19 @@ flutter:
   assets:
     - assets/images/
     - assets/images/lamps/
-    - assets/images/armchairs/armchair1/
     - assets/images/chairs/chair1/
     - assets/images/chairs/
     - assets/images/chairs/chair1/black/
     - assets/images/chairs/chair1/light_pink/
     - assets/images/tables/
     - assets/images/tables/table1/
+    - assets/images/armchairs/
+    - assets/images/armchairs/armchair1/
+    - assets/images/armchairs/armchair1/green/
+    - assets/images/armchairs/armchair1/yellow/
+    - assets/images/armchairs/armchair2/
+    - assets/images/armchairs/armchair2/pink/
+    - assets/images/armchairs/armchair3/
     - assets/icons/
   #   - images/a_dot_ham.jpeg
 
