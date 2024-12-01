@@ -506,5 +506,144 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
     ),
+
+    /* Lamps ***/
+    ProductEntity(
+      id: 19,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xffbe874f): const [
+          AppImageAssets.lamp1,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+      isFavourite: true,
+      isPopular: true,
+    ),
+    ProductEntity(
+      id: 20,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xfffdf6ee): const [
+          AppImageAssets.lamp2,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 21,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xffe3e2dd): const [
+          AppImageAssets.lamp3,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 22,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xffefddc5): const [
+          AppImageAssets.lamp4,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 23,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xff656f71): const [
+          AppImageAssets.lamp5,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 24,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xffd9ceb9): const [
+          AppImageAssets.lamp6,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 25,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xffdeb295): const [
+          AppImageAssets.lamp7,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 26,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xffeee3da): const [
+          AppImageAssets.lamp8,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 27,
+      categoryId: 5,
+      name: 'Lamp',
+      images: {
+        const Color(0xff9f8586): const [
+          AppImageAssets.lamp9,
+        ],
+      },
+      description:
+      'This lamp is a perfect mix of style and functionality. Its sleek design complements any decor, while the adjustable brightness provides the ideal ambiance for any setting. Built with quality materials, it\'s both durable and easy to maintain. A stylish and practical lighting solution for any space!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
   ];
 }

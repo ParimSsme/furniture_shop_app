@@ -84,5 +84,9 @@ class AppImageAssets {
   static const String lamp3 = '$_basePath/lamps/lamp3.jpg';
   static const String lamp4 = '$_basePath/lamps/lamp4.jpg';
   static const String lamp5 = '$_basePath/lamps/lamp5.jpg';
+  static const String lamp6 = '$_basePath/lamps/lamp6.jpg';
+  static const String lamp7 = '$_basePath/lamps/lamp7.jpg';
+  static const String lamp8 = '$_basePath/lamps/lamp8.jpg';
+  static const String lamp9 = '$_basePath/lamps/lamp9.jpg';
 
 }
