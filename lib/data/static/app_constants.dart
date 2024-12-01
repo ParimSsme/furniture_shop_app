@@ -166,6 +166,49 @@ class AppConstants {
 
   /// Products static data
   static List<ProductEntity> products = [
+
+    /* Chairs */
+    ProductEntity(
+      id: 1,
+      categoryId: 1,
+      name: 'Chair',
+      images: {
+        Colors.black: const [
+          AppImageAssets.chair1Black_1,
+          AppImageAssets.chair1Black_2,
+          AppImageAssets.chair1Black_3,
+          AppImageAssets.chair1Black_4,
+        ],
+        const Color(0xffe3d7d7): const [
+          AppImageAssets.chair1Pink_1,
+          AppImageAssets.chair1Pink_2,
+          AppImageAssets.chair1Pink_3,
+        ],
+      },
+      description:
+      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+      isFavourite: true,
+      isPopular: true,
+    ),
+    ProductEntity(
+      id: 2,
+      categoryId: 1,
+      name: 'Chair',
+      images: {
+        Colors.grey: const [
+          AppImageAssets.chair2,
+        ],
+      },
+      description:
+      'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+
     ProductEntity(
       id: 0,
       categoryId: 0,
@@ -231,47 +274,7 @@ class AppConstants {
       isFavourite: true,
     ),
 
-    /// Chairs
-    ProductEntity(
-      id: 4,
-      categoryId: 1,
-      name: 'Chair',
-      images: {
-        Colors.black: const [
-          AppImageAssets.chair1Black_1,
-          AppImageAssets.chair1Black_2,
-          AppImageAssets.chair1Black_3,
-          AppImageAssets.chair1Black_4,
-        ],
-        const Color(0xffe3d7d7): const [
-          AppImageAssets.chair1Pink_1,
-          AppImageAssets.chair1Pink_2,
-          AppImageAssets.chair1Pink_3,
-        ],
-      },
-      description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
-      price: 50,
-      rate: 3.9,
-      reviews: 100,
-      isFavourite: true,
-    ),
-    ProductEntity(
-      id: 4,
-      categoryId: 1,
-      name: 'Chair',
-      images: {
-        Colors.grey: const [
-          AppImageAssets.chair2,
-        ],
-      },
-      description:
-          'Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home.',
-      price: 50,
-      rate: 3.9,
-      reviews: 100,
-      isFavourite: true,
-    ),
+
 
     /// Lamps
     ProductEntity(
