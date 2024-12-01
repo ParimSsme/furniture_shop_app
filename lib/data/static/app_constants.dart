@@ -389,5 +389,122 @@ class AppConstants {
       rate: 3.9,
       reviews: 100,
     ),
+
+    /* Beds ***/
+    ProductEntity(
+      id: 13,
+      categoryId: 4,
+      name: 'Bed',
+      images: {
+        const Color(0xff3f3b32): const [
+          AppImageAssets.bed1Brown_1,
+          AppImageAssets.bed1Brown_2,
+        ],
+        const Color(0xff3c404c): const [
+          AppImageAssets.bed1_2,
+        ],
+        const Color(0xff7b706a): const [
+          AppImageAssets.bed1_3,
+        ],
+        const Color(0xffa39e9b): const [
+          AppImageAssets.bed1_4,
+        ],
+      },
+      description:
+      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+      isFavourite: true,
+      isPopular: true,
+    ),
+    ProductEntity(
+      id: 14,
+      categoryId: 4,
+      name: 'Bed',
+      images: {
+        const Color(0xffad9b8f): const [
+          AppImageAssets.bed2LightBrown_1,
+          AppImageAssets.bed2LightBrown_2,
+        ],
+        const Color(0xff736e68): const [
+          AppImageAssets.bed2_2,
+        ],
+        const Color(0xffc2c1bf): const [
+          AppImageAssets.bed2_3,
+        ],
+      },
+      description:
+      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 15,
+      categoryId: 4,
+      name: 'Bed',
+      images: {
+        const Color(0xff845f3b): const [
+          AppImageAssets.bed3_1,
+        ],
+        const Color(0xff9f8164): const [
+          AppImageAssets.bed3_2,
+        ],
+        const Color(0xff915438): const [
+          AppImageAssets.bed3_3,
+        ],
+      },
+      description:
+      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 16,
+      categoryId: 4,
+      name: 'Bed',
+      images: {
+        const Color(0xff896e59): const [
+          AppImageAssets.bed4,
+        ],
+      },
+      description:
+      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 17,
+      categoryId: 4,
+      name: 'Bed',
+      images: {
+        const Color(0xff783a23): const [
+          AppImageAssets.bed5,
+        ],
+      },
+      description:
+      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
+    ProductEntity(
+      id: 18,
+      categoryId: 4,
+      name: 'Bed',
+      images: {
+        const Color(0xff77544e): const [
+          AppImageAssets.bed6,
+        ],
+      },
+      description:
+      'This bed combines comfort and durability with a sleek, modern design. The sturdy frame provides excellent support, while the high-quality finish adds a touch of elegance to any bedroom. Easy to assemble and spacious, it ensures a restful night\'s sleep. A perfect blend of style and functionality!',
+      price: 50,
+      rate: 3.9,
+      reviews: 100,
+    ),
   ];
 }

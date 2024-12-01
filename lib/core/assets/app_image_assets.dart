@@ -56,6 +56,28 @@ class AppImageAssets {
   /* Armchair 4 ***/
   static const String armchair4 = '$_basePath/armchairs/armchair4.jpg';
 
+
+  /// Beds
+  /* Bed 1 ***/
+  static const String bed1Brown_1 = '$_basePath/beds/bed1/brown/bed1_brown_1.jpg';
+  static const String bed1Brown_2 = '$_basePath/beds/bed1/brown/bed1_brown_2.jpg';
+  static const String bed1_2 = '$_basePath/beds/bed1/bed1_2.jpg';
+  static const String bed1_3 = '$_basePath/beds/bed1/bed1_3.jpg';
+  static const String bed1_4 = '$_basePath/beds/bed1/bed1_4.jpg';
+  /* Bed 2 ***/
+  static const String bed2LightBrown_1 = '$_basePath/beds/bed2/light_brown/bed2_1_1.jpg';
+  static const String bed2LightBrown_2 = '$_basePath/beds/bed2/light_brown/bed2_1_2.jpg';
+  static const String bed2_2 = '$_basePath/beds/bed2/bed2_2.jpg';
+  static const String bed2_3 = '$_basePath/beds/bed2/bed2_3.jpg';
+  /* Bed 3 ***/
+  static const String bed3_1 = '$_basePath/beds/bed3/bed3_1.jpg';
+  static const String bed3_2 = '$_basePath/beds/bed3/bed3_2.jpg';
+  static const String bed3_3 = '$_basePath/beds/bed3/bed3_3.jpg';
+  /* Other Beds ***/
+  static const String bed4 = '$_basePath/beds/bed4.jpg';
+  static const String bed5 = '$_basePath/beds/bed5.jpg';
+  static const String bed6 = '$_basePath/beds/bed6.jpg';
+
   /// Lamps
   static const String lamp1 = '$_basePath/lamps/lamp1.jpg';
   static const String lamp2 = '$_basePath/lamps/lamp2.jpg';

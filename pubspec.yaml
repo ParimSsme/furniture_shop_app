@@ -87,6 +87,12 @@ flutter:
     - assets/images/armchairs/armchair2/
     - assets/images/armchairs/armchair2/pink/
     - assets/images/armchairs/armchair3/
+    - assets/images/beds/
+    - assets/images/beds/bed1/
+    - assets/images/beds/bed1/brown/
+    - assets/images/beds/bed2/
+    - assets/images/beds/bed2/light_brown/
+    - assets/images/beds/bed3/
     - assets/icons/
   #   - images/a_dot_ham.jpeg
 
