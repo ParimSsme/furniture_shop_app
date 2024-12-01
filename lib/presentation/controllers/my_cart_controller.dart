@@ -1,4 +1,4 @@
-import 'package:furniture_shop_app/core/params/screen/add_order_screen_param.dart';
+import 'package:furniture_shop_app/core/params/screen/check_out_screen_param.dart';
 import 'package:furniture_shop_app/core/utils/custom_snackbar.dart';
 import 'package:furniture_shop_app/domain/entities/my_cart_entity.dart';
 import 'package:get/get.dart';
@@ -63,7 +63,7 @@ class MyCartController extends GetxController {
 
   void checkOut() {
     if(myCarts.isNotEmpty) {
-      AppNavigator.to.navigateToAddOrder(param: AddOrderScreenParam([], totalPrice.value));
+      AppNavigator.to.navigateToCheckOut(param: CheckOutScreenParam([], totalPrice.value));
     } else {
       CustomSnackbar.showWarning(message: 'Please add some products to your cart!');
     }

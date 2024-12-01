@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import '../params/screen/add_order_screen_param.dart';
+import '../params/screen/check_out_screen_param.dart';
 import '../routes/app_routes.dart';
 
 class AppNavigator {
@@ -26,8 +26,6 @@ class AppNavigator {
 
   void navigateToMyCart() => Get.toNamed(AppRoutes.myCart);
 
-  void navigateToCheckOut() => Get.toNamed(AppRoutes.checkOut);
-
   void navigateToSettings() => Get.toNamed(AppRoutes.settings);
 
   void navigateToNotifications() => Get.toNamed(AppRoutes.notifications);
@@ -51,10 +49,10 @@ class AppNavigator {
 
   void navigateToAddPayment() => Get.toNamed(AppRoutes.addPayment);
 
-  void navigateToAddOrder({
-    required AddOrderScreenParam param,
+  void navigateToCheckOut({
+    required CheckOutScreenParam param,
   }) =>
-      Get.toNamed(AppRoutes.addOrder, arguments: param);
+      Get.toNamed(AppRoutes.checkOut, arguments: param);
 
   void navigateToCongrats() => Get.toNamed(AppRoutes.congrats);
 }

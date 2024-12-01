@@ -41,8 +41,8 @@ const _buttonStyle = TextStyle(
 );
 
 const kTextButtonStyle = TextStyle(
-  fontFamily: _gelasio,
-  fontSize: 18,
+  fontFamily: _nunitoSans,
+  fontSize: 20,
   color: AppColors.textOnPrimary,
 );
 
@@ -58,7 +58,7 @@ final kButtonStyle = _buttonStyle.copyWith(
 
 final kBlackGelasioLargeTitleStyle = _largeTitleStyle.copyWith(
   fontFamily: _gelasio,
-  color: AppColors.textSecondary,
+  color: AppColors.textPrimary,
   fontSize: 30,
   fontWeight: FontWeight.bold,
 );

@@ -1,15 +1,15 @@
 import 'package:furniture_shop_app/presentation/bindings/auth/login_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/auth/sign_up_binding.dart';
+import 'package:furniture_shop_app/presentation/bindings/check_out/check_out_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/main/profile_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/my_cart_binding.dart';
-import 'package:furniture_shop_app/presentation/bindings/orders/add_order_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/payment_method/payment_method_list_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/product_review_binding.dart';
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_cart/my_cart_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_reviews/my_reviews_page.dart';
-import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart';
-import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';
+import 'package:furniture_shop_app/presentation/pages/check_out/check_out_page.dart';
+import 'package:furniture_shop_app/presentation/pages/check_out/congrats_page.dart';
 import 'package:furniture_shop_app/presentation/pages/payment_method/add_payment_method_page.dart';
 import 'package:furniture_shop_app/presentation/pages/product_review/product_review_page.dart';
 import 'package:furniture_shop_app/presentation/pages/settings/settings_page.dart';
@@ -59,7 +59,6 @@ class AppRoutes {
   static const String myOrders = '/myOrders';
   static const String addShippingAddress = '/addShippingAddress';
   static const String addPayment = '/addPayment';
-  static const String addOrder = '/addOrder';
   static const String congrats = '/congrats';
 
   static List<GetPage> routes = [
@@ -123,9 +122,9 @@ class AppRoutes {
       binding: MyCartBinding(),
     ),
     GetPage(
-      name: addOrder,
-      page: () => const AddOrderPage(),
-      binding: AddOrderBinding(),
+      name: checkOut,
+      page: () => const CheckOutPage(),
+      binding: CheckOutBinding(),
     ),
     GetPage(
       name: congrats,
