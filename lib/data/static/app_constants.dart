@@ -3,6 +3,7 @@ import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
 import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
 import 'package:furniture_shop_app/core/enums/order_state.dart';
 import 'package:furniture_shop_app/domain/entities/favourite_entity.dart';
+import 'package:furniture_shop_app/domain/entities/my_cart_entity.dart';
 import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:furniture_shop_app/domain/entities/order_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_category_entity.dart';
@@ -196,6 +197,45 @@ class AppConstants {
       image: AppImageAssets.armchair1Yellow_3,
     ),
     FavouriteEntity(
+      id: 5,
+      productId: 20,
+      name: 'Lamp',
+      price: 20,
+      image: AppImageAssets.lamp2,
+    ),
+  ];
+
+  /// My carts static data
+  static List<MyCartEntity> myCarts =  [
+    MyCartEntity(
+      id: 1,
+      name: 'Minimal Stand',
+      productId: 5,
+      price: 50,
+      image: AppImageAssets.table3,
+    ),
+    MyCartEntity(
+      id: 2,
+      productId: 19,
+      price: 20,
+      name: 'Minimal Lamp',
+      image: AppImageAssets.lamp1,
+    ),
+    MyCartEntity(
+      id: 3,
+      productId: 15,
+      name: 'Bed',
+      price: 500,
+      image: AppImageAssets.bed3_1,
+    ),
+    MyCartEntity(
+      id: 4,
+      productId: 9,
+      name: 'Armchair',
+      price: 100,
+      image: AppImageAssets.armchair1Yellow_3,
+    ),
+    MyCartEntity(
       id: 5,
       productId: 20,
       name: 'Lamp',

@@ -1,30 +1,35 @@
-import 'package:furniture_shop_app/data/datasources/local_data_source.dart';
-import 'package:furniture_shop_app/data/repositories/local_data_repository.dart';
+import 'package:furniture_shop_app/core/params/screen/add_order_screen_param.dart';
+import 'package:furniture_shop_app/core/utils/custom_snackbar.dart';
 import 'package:furniture_shop_app/domain/entities/my_cart_entity.dart';
 import 'package:get/get.dart';
+import '../../core/utils/app_navigator.dart';
+import '../../data/datasources/static_data_source.dart';
+import '../../data/repositories/static_data_repository.dart';
 
 class MyCartController extends GetxController {
   static MyCartController get to => Get.find();
 
-  final LocalDataRepository _localDataRepository =
-      LocalDataRepository(LocalDataSource());
+  final StaticDataRepository _staticDataRepository;
 
-  final myCarts = <MyCartEntity>[].obs;
+  MyCartController()
+      : _staticDataRepository = StaticDataRepository(const StaticDataSource());
+
+  /// Static data
+  late List<MyCartEntity> _myCarts = <MyCartEntity>[];
+  late RxList<MyCartEntity> myCarts = <MyCartEntity>[].obs;
+
   final totalPrice = 0.0.obs;
 
   @override
   void onInit() {
     super.onInit();
-    loadData();
-  }
-
-  void loadData() {
-    _loadMyCarts();
+    loadStaticData();
     _calculateTotalPrice();
   }
 
-  void _loadMyCarts() {
-    myCarts.assignAll(_localDataRepository.getMyCarts() ?? []);
+  void loadStaticData() {
+    _myCarts = List.unmodifiable(_staticDataRepository.getMyCarts());
+    myCarts(_myCarts);
   }
 
   void _calculateTotalPrice() {
@@ -56,15 +61,11 @@ class MyCartController extends GetxController {
     return myCarts.firstWhere((myCart) => myCart.id == id);
   }
 
-  void removeMyCart({
-    required int id,
-  }) {
-    _localDataRepository.removeMyCart(myCartEntity: _findMyCartById(id));
-    _loadMyCarts();
-    _calculateTotalPrice();
-  }
-
   void checkOut() {
-    // Add checkout logic here
+    if(myCarts.isNotEmpty) {
+      AppNavigator.to.navigateToAddOrder(param: AddOrderScreenParam([], totalPrice.value));
+    } else {
+      CustomSnackbar.showWarning(message: 'Please add some products to your cart!');
+    }
   }
 }

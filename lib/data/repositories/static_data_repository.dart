@@ -5,6 +5,7 @@ import 'package:furniture_shop_app/domain/entities/product_category_entity.dart'
 import 'package:furniture_shop_app/domain/entities/product_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_review_entity.dart';
 
+import '../../domain/entities/my_cart_entity.dart';
 import '../datasources/static_data_source.dart';
 
 class StaticDataRepository {
@@ -35,6 +36,10 @@ class StaticDataRepository {
 
   List<FavouriteEntity> getFavourites() {
     return _staticDataSource.getFavourites();
+  }
+
+  List<MyCartEntity> getMyCarts() {
+    return _staticDataSource.getMyCarts();
   }
 
   List<NotificationEntity> getNotifications() {

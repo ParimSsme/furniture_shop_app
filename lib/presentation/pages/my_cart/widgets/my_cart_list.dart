@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
 import 'package:furniture_shop_app/domain/entities/my_cart_entity.dart';
 import 'package:furniture_shop_app/presentation/controllers/my_cart_controller.dart';
 import 'package:get/get.dart';
-import '../../common/widgets/furniture_icon_button.dart';
+import '../../../../core/widgets/app_icon_button.dart';
+import '../../../../core/theme/app_text_theme.dart';
 
 class MyCartList extends StatelessWidget {
   final List<MyCartEntity> list;
@@ -41,7 +41,7 @@ class _MyCartListItem extends StatelessWidget {
     return SizedBox(
       height: 120,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
@@ -57,17 +57,23 @@ class _MyCartListItem extends StatelessWidget {
             children: [
               Text(
                 entity.name,
-                style: kBodyNunitoTextStyle,
+                style: kGreyNunitoSmallTitleStyle.copyWith(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16
+                ),
               ),
               Text(
                 '\$ ${entity.price}',
-                style: kBlackGelasioMediumTitleStyle,
+                style: kBlackNunitoMediumTitleStyle.copyWith(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20
+                ),
               ),
               const Spacer(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  FurnitureIconButton(
+                  AppIconButton(
                     icon: const Icon(Icons.add),
                     onClick: () {
                       controller.increaseProductCount(id: entity.id);
@@ -80,12 +86,12 @@ class _MyCartListItem extends StatelessWidget {
                     padding: const EdgeInsets.all(15),
                     child: Obx(
                       () => Text(
-                        '${productCount.value}',
+                        '${productCount.value}'.padLeft(2, '0'),
                         style: kBlackNunitoSmallTitleStyle,
                       ),
                     ),
                   ),
-                  FurnitureIconButton(
+                  AppIconButton(
                     icon: const Icon(Icons.horizontal_rule),
                     onClick: () {
                       controller.reduceProductCount(id: entity.id);
@@ -99,7 +105,8 @@ class _MyCartListItem extends StatelessWidget {
           ),
           const Spacer(),
           IconButton(
-            onPressed: () => controller.removeMyCart(id: entity.id),
+            onPressed: () {
+            },
             icon: const Icon(Icons.cancel_outlined),
           )
         ],

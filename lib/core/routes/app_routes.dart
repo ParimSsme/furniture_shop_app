@@ -6,7 +6,7 @@ import 'package:furniture_shop_app/presentation/bindings/orders/add_order_bindin
 import 'package:furniture_shop_app/presentation/bindings/payment_method/payment_method_list_binding.dart';
 import 'package:furniture_shop_app/presentation/bindings/product_review_binding.dart';
 import 'package:furniture_shop_app/presentation/pages/intro/splash_page.dart';
-import 'package:furniture_shop_app/presentation/pages/my_cart_page.dart';
+import 'package:furniture_shop_app/presentation/pages/my_cart/my_cart_page.dart';
 import 'package:furniture_shop_app/presentation/pages/my_reviews/my_reviews_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/add_order_page.dart';
 import 'package:furniture_shop_app/presentation/pages/orders/congrats_page.dart';

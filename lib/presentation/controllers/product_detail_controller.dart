@@ -1,11 +1,6 @@
 import 'dart:async';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/core/utils/app_navigator.dart';
-import 'package:furniture_shop_app/data/datasources/local_data_source.dart';
-import 'package:furniture_shop_app/data/repositories/local_data_repository.dart';
-import 'package:furniture_shop_app/domain/entities/my_cart_entity.dart';
 import 'package:furniture_shop_app/domain/entities/product_entity.dart';
 import 'package:get/get.dart';
 import '../../data/datasources/static_data_source.dart';
@@ -15,11 +10,9 @@ class ProductDetailController extends GetxController {
   static ProductDetailController get to => Get.find();
 
   final StaticDataRepository _staticDataRepository;
-  final LocalDataRepository _localDataRepository;
 
   ProductDetailController()
-      : _staticDataRepository = StaticDataRepository(StaticDataSource()),
-        _localDataRepository = LocalDataRepository(LocalDataSource());
+      : _staticDataRepository = StaticDataRepository(const StaticDataSource());
 
   /// Static data
   final Rx<ProductEntity> _furniture = const ProductEntity().obs;
@@ -33,7 +26,7 @@ class ProductDetailController extends GetxController {
   late Timer _timer;
 
   void _startAutoSlide() {
-    _timer = Timer.periodic(Duration(seconds: 3), (Timer timer) {
+    _timer = Timer.periodic(const Duration(seconds: 3), (Timer timer) {
       if (imageIndex.value <
           (furniture.images[selectedColor]?.length ?? 1) - 1) {
         imageIndex.value++;
@@ -42,7 +35,7 @@ class ProductDetailController extends GetxController {
       }
       pageController.animateToPage(
         imageIndex.value,
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
       );
     });
@@ -72,15 +65,7 @@ class ProductDetailController extends GetxController {
   }
 
   void onAddToCart() {
-    _localDataRepository.addMyCart(
-      cartEntity: MyCartEntity(
-        id: furniture.id,
-        images: furniture.images,
-        name: furniture.name,
-        price: furniture.price,
-        productCount: productCount,
-      ),
-    );
+
   }
 
   void onAddToFavorite() {
