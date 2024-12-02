@@ -93,7 +93,7 @@ class MyOrderListItem extends StatelessWidget {
                 Text(
                   entity.state.text,
                   style: kBlackNunitoSmallTitleStyle.copyWith(
-                    color: entity.state.textColor,
+                    color: entity.state.color,
                   ),
                 ),
               ],

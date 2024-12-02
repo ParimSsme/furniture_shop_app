@@ -5,23 +5,24 @@ import '../theme/app_text_theme.dart';
 class AppContainedTextButton extends StatelessWidget {
   final Function()? onPressed;
   final String text;
+  final Color backgroundColor;
   const AppContainedTextButton({
     super.key,
     required this.onPressed,
     required this.text,
+    this.backgroundColor = AppColors.primary,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-          backgroundColor: AppColors.primary,
+          backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
           textStyle: kTextButtonStyle,
           foregroundColor: kTextButtonStyle.color,
-          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10)
       ),
       onPressed: onPressed,
       child: Text(text),

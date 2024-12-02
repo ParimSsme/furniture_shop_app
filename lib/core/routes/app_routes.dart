@@ -16,6 +16,7 @@ import 'package:furniture_shop_app/presentation/pages/settings/settings_page.dar
 import 'package:furniture_shop_app/presentation/pages/shipping_address/add_shipping_address_page.dart';
 import 'package:furniture_shop_app/presentation/pages/shipping_address/shipping_address_list_page.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import '../../presentation/bindings/check_out/congrats_binding.dart';
 import '../../presentation/bindings/intro/onboarding_binding.dart';
 import '../../presentation/bindings/main/favorites_binding.dart';
 import '../../presentation/bindings/main/home_binding.dart';
@@ -129,6 +130,7 @@ class AppRoutes {
     GetPage(
       name: congrats,
       page: () => const CongratsPage(),
+      binding: CongratsBinding()
     ),
     GetPage(
         name: paymentMethod,
