@@ -69,7 +69,7 @@ class CongratsPage extends GetView<CongratsController> {
               text: 'Track your orders',
               onPressed: () {},
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 30),
             TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
