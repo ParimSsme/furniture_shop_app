@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:furniture_shop_app/core/utils/app_navigator.dart';
 import 'package:get/get.dart';
 import '../../../core/assets/app_icon_assets.dart';

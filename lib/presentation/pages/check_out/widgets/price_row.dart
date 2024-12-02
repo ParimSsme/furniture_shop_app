@@ -32,6 +32,5 @@ class PriceRow extends StatelessWidget {
         ),
       ],
     );
-    ;
   }
 }
