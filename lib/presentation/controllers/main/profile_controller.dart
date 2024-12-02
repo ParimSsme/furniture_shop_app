@@ -42,6 +42,7 @@ class ProfileController extends GetxController {
           actions: [
             AppContainedTextButton(
               text: 'Yes',
+              padding: EdgeInsets.zero,
               onPressed: () {
                 SharedPreferencesService.to.loggedIn = false;
                 AppNavigator.to.navigateToLogin();
@@ -50,6 +51,7 @@ class ProfileController extends GetxController {
             ),
             AppContainedTextButton(
               text: 'No',
+              padding: EdgeInsets.zero,
               onPressed: () => Get.back(),
               backgroundColor: AppColors.error,
             ),
