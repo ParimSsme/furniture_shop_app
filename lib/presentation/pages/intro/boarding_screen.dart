@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
+import 'package:furniture_shop_app/core/widgets/app_contained_text_button.dart';
 import 'package:furniture_shop_app/presentation/controllers/intro/onboarding_controller.dart';
-import '../../../config/theme/app_text_theme.dart';
+import '../../../core/theme/app_text_theme.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -49,11 +49,9 @@ class OnboardingScreen extends StatelessWidget {
                 ],
               ),
               const Spacer(flex: 2),
-              TextButton(
+              AppContainedTextButton(
                 onPressed: OnboardingController.to.completeOnboarding,
-                child: const Text(
-                  'Get Started',
-                ),
+                text: 'Get Started',
               ),
               const Spacer(flex: 2),
             ],
