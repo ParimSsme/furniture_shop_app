@@ -3,7 +3,7 @@ import 'package:furniture_shop_app/core/widgets/app_card.dart';
 import 'package:furniture_shop_app/core/widgets/app_contained_text_button.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import '../../../controllers/auth/login_controller.dart';
-import '../../../widgets/auth_text_field.dart';
+import 'auth_text_field.dart';
 
 class LoginInputCard extends StatelessWidget {
   const LoginInputCard({super.key});
