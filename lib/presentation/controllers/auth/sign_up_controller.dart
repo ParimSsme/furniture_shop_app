@@ -4,15 +4,16 @@ import 'package:furniture_shop_app/core/utils/validators.dart';
 import 'package:furniture_shop_app/domain/entities/user_entity.dart';
 import 'package:get/get.dart';
 import '../../../core/routes/app_routes.dart';
-import '../../../core/services/navigation_service.dart';
 import '../../../core/services/shared_preferences_service.dart';
+import '../../../core/utils/app_navigator.dart';
 import '../../../data/datasources/local_data_source.dart';
 import '../../../data/repositories/local_data_repository.dart';
 
 class SignUpController extends GetxController {
   static SignUpController get to => Get.find();
 
-  final LocalDataRepository _localDataRepository = LocalDataRepository(LocalDataSource());
+  final LocalDataRepository _localDataRepository =
+      LocalDataRepository(LocalDataSource());
 
   final nameController = TextEditingController().obs;
   final emailController = TextEditingController().obs;
@@ -30,12 +31,11 @@ class SignUpController extends GetxController {
 
   void signUp() {
     if (_validateCredentials()) {
-      _successfulLogin();
+      _successfulSignUp();
     }
   }
 
   bool _validateCredentials() {
-
     final name = nameController.value.text;
     final email = emailController.value.text;
     final password = passwordController.value.text;
@@ -69,18 +69,22 @@ class SignUpController extends GetxController {
     return true;
   }
 
-  void _successfulLogin() {
+  void _successfulSignUp() {
     _localDataRepository.saveUser(
       userEntity: UserEntity(
         name: nameController.value.text,
         email: emailController.value.text,
       ),
     );
+    nameController.value.text = '';
+    emailController.value.text = '';
+    passwordController.value.text = '';
+    confirmPasswordController.value.text = '';
     SharedPreferencesService.to.loggedIn = true;
     Get.offAllNamed(AppRoutes.home);
   }
 
-  void login() => NavigationService.to.navigateToLogin();
+  void login() => AppNavigator.to.navigateToLogin();
 
   @override
   void onClose() {

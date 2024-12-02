@@ -9,7 +9,7 @@ class AppNavigator {
 
   void navigateToOnboarding() => Get.toNamed(AppRoutes.onboarding);
 
-  void navigateToLogin() => Get.toNamed(AppRoutes.login);
+  void navigateToLogin() => Get.offAllNamed(AppRoutes.login);
 
   void navigateToSignUp() => Get.toNamed(AppRoutes.signUp);
 

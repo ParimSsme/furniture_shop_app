@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furniture_shop_app/core/extensions/widget_extension.dart';
 import 'package:furniture_shop_app/presentation/pages/auth/widgets/signup_input_card.dart';
 import '../../../core/assets/app_icon_assets.dart';
 import '../../../core/theme/app_text_theme.dart';
@@ -20,22 +19,33 @@ class SignUpPage extends StatelessWidget {
           children: [
 
             /// Header
-            Row(
-              children: [
-                const Expanded(child: Divider(thickness: 1.5)),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: SvgPicture.asset(AppIconAssets.furniture),
-                ),
-                const Expanded(child: Divider(thickness: 1.5)),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Expanded(child: Divider(thickness: 1.5)),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: SvgPicture.asset(AppIconAssets.furniture),
+                      ),
+                      const Expanded(child: Divider(thickness: 1.5)),
+                    ],
+                  ),
+
+                  const SizedBox(height: 25),
+
+                  Text('WELCOME', style: kBlackGelasioLargeTitleStyle),
+                ],
+              ),
             ),
-            Text('WELCOME', style: kBlackGelasioLargeTitleStyle),
+
+
             const SignupInputCard(),
+
           ],
-        ).defaultScreenPadding(
-          top: 40,
-          bottom: 40,
         ),
       ),
     );

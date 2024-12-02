@@ -12,20 +12,20 @@ class AuthMiddleware extends GetMiddleware {
     // Check onboarding completion status
     bool isOnboardingCompleted = sharedPreferencesService.onboardingCompleted;
 
-    // Check if the user is logged in
+    /// Check if the user is logged in
     bool isLoggedIn = sharedPreferencesService.loggedIn;
 
-    // Redirect to Onboarding if not completed
+    /// Redirect to Onboarding if not completed
     if (!isOnboardingCompleted) {
       return const RouteSettings(name: AppRoutes.onboarding);
     }
 
-    // If the user is logged in, go directly to HomePage
+    /// If the user is logged in, go directly to HomePage
     if (isLoggedIn) {
       return const RouteSettings(name: AppRoutes.home);
     }
 
-    // Otherwise, redirect to the LoginPage
+    /// Otherwise, redirect to the LoginPage
     return const RouteSettings(name: AppRoutes.login);
   }
 }
