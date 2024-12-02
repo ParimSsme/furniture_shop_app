@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shop_app/core/theme/app_text_theme.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../domain/entities/notification_entity.dart';
+import '../../../../../core/theme/app_colors.dart';
+import '../../../../../domain/entities/notification_entity.dart';
 
 class NotificationListItem extends StatelessWidget {
   final NotificationEntity entity;

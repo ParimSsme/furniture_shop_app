@@ -32,10 +32,10 @@ import '../../presentation/pages/auth/signup_page.dart';
 import '../../presentation/pages/intro/boarding_screen.dart';
 import '../../presentation/pages/main/favourites/favorites_page.dart';
 import '../../presentation/pages/my_orders/my_orders_page.dart';
-import '../../presentation/pages/main/notifications_page.dart';
+import '../../presentation/pages/main/notifications/notifications_page.dart';
 import '../../presentation/pages/payment_method/payment_method_list_page.dart';
 import '../../presentation/pages/product_detail/product_detail_page.dart';
-import '../../presentation/pages/main/profile_page.dart';
+import '../../presentation/pages/main/profile/profile_page.dart';
 import '../middleware/auth_middleware.dart';
 
 class AppRoutes {

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:furniture_shop_app/presentation/pages/main/favorites_page.dart';
-import 'package:furniture_shop_app/presentation/pages/main/home_page.dart';
+import 'package:furniture_shop_app/presentation/pages/main/favourites/favorites_page.dart';
+import 'package:furniture_shop_app/presentation/pages/main/home/home_page.dart';
 import '../../../core/assets/app_icon_assets.dart';
 import '../../../core/theme/app_colors.dart';
-import 'notifications_page.dart';
-import 'profile_page.dart';
+import 'notifications/notifications_page.dart';
+import 'profile/profile_page.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -17,7 +17,7 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
+    const HomePage(),
     const FavoritesPage(),
     const NotificationsPage(),
     const ProfilePage(),

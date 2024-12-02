@@ -4,9 +4,9 @@ import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
 import 'package:furniture_shop_app/core/assets/app_image_assets.dart';
 import 'package:furniture_shop_app/core/extensions/widget_extension.dart';
 import 'package:furniture_shop_app/presentation/controllers/main/profile_controller.dart';
-import 'package:furniture_shop_app/presentation/pages/main/widgets/profile_tile.dart';
+import 'package:furniture_shop_app/presentation/pages/main/profile/widgets/profile_tile.dart';
 import 'package:get/get.dart';
-import '../../../core/theme/app_text_theme.dart';
+import '../../../../core/theme/app_text_theme.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
