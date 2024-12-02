@@ -16,7 +16,7 @@ class AppColors {
   static const Color unselectedPaymentCardBackground = Color(0xff999999);
 
   /// Text Field
-  static const Color textFiledDisabledFilledColor = Color(0xffe6e6e6);
+  static const Color textFiledDisabledFilledColor = Color(0xffebebeb);
   static const Color textFiledEnabledFilledColor = Colors.white;
   static const Color textFiledEnabledBorderColor = Color(0xffc8c8c8);
 
