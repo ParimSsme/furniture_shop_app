@@ -70,4 +70,7 @@ class ProductDetailController extends GetxController {
 
   void onAddToFavorite() {
   }
+
+  void onBack() => Get.back();
+
 }
