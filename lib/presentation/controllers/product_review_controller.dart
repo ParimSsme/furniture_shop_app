@@ -27,4 +27,6 @@ class ProductReviewController extends GetxController {
     reviews(_reviews);
   }
 
+  void onBack() => Get.back();
+
 }

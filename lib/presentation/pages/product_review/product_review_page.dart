@@ -15,9 +15,7 @@ class ProductReviewPage extends GetView<ProductReviewController> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {
-            Get.back();
-          },
+          onPressed: () => controller.onBack(),
           icon: const Icon(
             Icons.arrow_back_ios_new,
           ),
@@ -39,7 +37,7 @@ class ProductReviewPage extends GetView<ProductReviewController> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
-                      AppImageAssets.desk2,
+                      AppImageAssets.table3,
                       height: 100,
                       width: 100,
                       fit: BoxFit.cover,
@@ -96,6 +94,8 @@ class ProductReviewPage extends GetView<ProductReviewController> {
                 indent: 25,
                 endIndent: 25,
               ),
+
+              /// Review List
               Expanded(
                 child: ListView.separated(
                   itemCount: controller.reviews.length,
@@ -108,7 +108,8 @@ class ProductReviewPage extends GetView<ProductReviewController> {
                   },
                   separatorBuilder: (_, __) => const SizedBox(height: 20),
                 ),
-              )
+
+              ),
             ],
           ),
         ),
