@@ -6,6 +6,7 @@ import 'package:furniture_shop_app/core/widgets/app_contained_text_button.dart';
 import 'package:furniture_shop_app/presentation/controllers/check_out/congrats_controller.dart';
 import 'package:get/get.dart';
 import '../../../core/assets/app_icon_assets.dart';
+import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_text_theme.dart';
 
 class CongratsPage extends GetView<CongratsController> {
@@ -71,6 +72,18 @@ class CongratsPage extends GetView<CongratsController> {
             const SizedBox(height: 10),
             TextButton(
               onPressed: () {},
+              style: TextButton.styleFrom(
+                textStyle: kTextButtonStyle,
+                foregroundColor: AppColors.primary,
+                padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                side: const BorderSide(
+                  color: AppColors.primary,
+                  width: 1,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10), // Border radius
+                ),
+              ),
               child: const Text('BACK TO HOME'),
             ),
 

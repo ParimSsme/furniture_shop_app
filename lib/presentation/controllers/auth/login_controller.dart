@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:furniture_shop_app/core/utils/app_navigator.dart';
 import 'package:furniture_shop_app/core/utils/custom_snackbar.dart';
 import 'package:furniture_shop_app/core/utils/validators.dart';
 import 'package:furniture_shop_app/domain/entities/user_entity.dart';
 import 'package:get/get.dart';
 import '../../../core/routes/app_routes.dart';
-import '../../../core/services/navigation_service.dart';
 import '../../../core/services/shared_preferences_service.dart';
 import '../../../data/datasources/local_data_source.dart';
 import '../../../data/repositories/local_data_repository.dart';
@@ -58,7 +58,7 @@ class LoginController extends GetxController {
     Get.offAllNamed(AppRoutes.home);
   }
 
-  void signUp() => NavigationService.to.navigateToSignUp();
+  void signUp() => AppNavigator.to.navigateToSignUp();
 
   @override
   void onClose() {

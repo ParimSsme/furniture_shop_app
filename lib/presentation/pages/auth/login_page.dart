@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:furniture_shop_app/config/theme/app_text_theme.dart';
-import 'package:furniture_shop_app/core/assets/app_svg_assets.dart';
-import 'package:furniture_shop_app/core/extensions/widget_extension.dart';
-import '../../widgets/auth/login_input_card.dart';
+import '../../../core/assets/app_icon_assets.dart';
+import '../../../core/theme/app_text_theme.dart';
+import 'widgets/login_input_card.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -13,52 +12,45 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _Header(),
-            _GreetingText(),
-            LoginInputCard(),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+
+                  /// Header
+                  Row(
+                    children: [
+                      const Expanded(child: Divider(thickness: 1.5)),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: SvgPicture.asset(AppIconAssets.furniture),
+                      ),
+                      const Expanded(child: Divider(thickness: 1.5)),
+                    ],
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  /// Greeting texts
+                  Text('Hello!', style: kGreyGelasioLargeTitleStyle),
+                  Text('WELCOME BACK', style: kBlackGelasioLargeTitleStyle),
+
+                ],
+              ),
+            ),
+
+            const LoginInputCard(),
           ],
-        ).defaultScreenPadding(
-          top: 40,
-          bottom: 40,
         ),
       ),
     );
   }
 }
 
-class _Header extends StatelessWidget {
-  const _Header();
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Expanded(child: Divider(thickness: 1.5)),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SvgPicture.asset(AppSvgAssets.furniture),
-        ),
-        const Expanded(child: Divider(thickness: 1.5)),
-      ],
-    );
-  }
-}
-
-class _GreetingText extends StatelessWidget {
-  const _GreetingText();
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Hello!', style: kGreyGelasioMediumTitleStyle),
-        Text('WELCOME BACK', style: kBlackGelasioLargeTitleStyle),
-      ],
-    );
-  }
-}

@@ -91,13 +91,6 @@ final ThemeData appThemeData = ThemeData(
       textStyle: kTextButtonStyle,
       foregroundColor: AppColors.primary,
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-      side: const BorderSide(
-        color: AppColors.primary,
-        width: 1,
-      ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10), // Border radius
-      ),
     ),
   ),
 

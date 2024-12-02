@@ -23,7 +23,6 @@ class AppContainedTextButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
-          textStyle: kTextButtonStyle,
           foregroundColor: kTextButtonStyle.color,
         padding: padding,
       ),

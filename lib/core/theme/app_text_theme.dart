@@ -73,6 +73,13 @@ final kBlackNunitoMediumTitleStyle = _mediumTitleStyle.copyWith(
   fontFamily: _nunitoSans,
 );
 
+final kGreyGelasioLargeTitleStyle = _largeTitleStyle.copyWith(
+  fontFamily: _gelasio,
+  fontSize: 35,
+  color: AppColors.graniteGrey,
+  fontWeight: FontWeight.w500,
+);
+
 final kGreyGelasioMediumTitleStyle = _mediumTitleStyle.copyWith(
   fontFamily: _gelasio,
   color: AppColors.graniteGrey,

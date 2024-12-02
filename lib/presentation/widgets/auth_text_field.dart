@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shop_app/config/colors/furniture_colors.dart';
+import 'package:furniture_shop_app/core/theme/app_colors.dart';
 
 class AuthTextField extends StatelessWidget {
   final String label;
@@ -27,10 +27,13 @@ class AuthTextField extends StatelessWidget {
         suffixIcon: suffix,
         contentPadding: const EdgeInsets.symmetric(vertical: 10),
         enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+          borderSide: BorderSide(
+            color: Color(0xffdcdcdc),
+            width: 2,
+          ),
         ),
         focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: FurnitureColors.grey),
+          borderSide: BorderSide(color: AppColors.grey),
         ),
       ),
     );
