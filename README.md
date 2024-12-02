@@ -9,6 +9,6 @@
 
 | ![Add Payment Method Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/add_payment_method.png) | ![My Reviews Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/my_reviews.png) | ![Settings Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/settings.png) |
 |--------------------------------------------|--------------------------------------------|--------------------------------------------|
-| ![Image 4](https://via.placeholder.com/150) | ![Image 5](https://via.placeholder.com/150) | ![Image 6](https://via.placeholder.com/150) |
-| ![Image 7](https://via.placeholder.com/150) | ![Image 8](https://via.placeholder.com/150) | ![Image 9](https://via.placeholder.com/150) |
+| ![My Cart Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/my_cart.png) | ![Check Out Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/check_out.png) | ![Congrats Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/congrats.png) |
+| ![Log in](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/login.png) | ![Product Detail Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/product_detail.png) | ![Product Review Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/product_review.png) |
 
