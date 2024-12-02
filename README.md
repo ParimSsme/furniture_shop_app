@@ -1,16 +1,10 @@
 # furniture_shop_app
 
-A new Flutter project.
 
-## Getting Started
+### 3x3 Grid of Images
 
-This project is a starting point for a Flutter application.
+| ![Onboarding Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/onboarding.png) | ![Home Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/home.png) | ![Favourites Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/favourites.png) |
+|--------------------------------------------|--------------------------------------------|--------------------------------------------|
+| ![Image 4](https://via.placeholder.com/150) | ![Image 5](https://via.placeholder.com/150) | ![Image 6](https://via.placeholder.com/150) |
+| ![Image 7](https://via.placeholder.com/150) | ![Image 8](https://via.placeholder.com/150) | ![Image 9](https://via.placeholder.com/150) |
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
