@@ -20,5 +20,5 @@ This design was found publicly, and I appreciate the work that went into it. Tha
 | ![My Cart Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/my_cart.png) | ![Check Out Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/check_out.png) | ![Congrats Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/congrats.png) |
 | ![Log in](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/login.png) | ![Product Detail Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/product_detail.png) | ![Product Review Page](https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/product_review.png) |
 
-<img src="https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/sign_up.png" alt="Sign Up Page" width="200" height="100">
+<img src="https://github.com/ParimSsme/furniture_shop_app/blob/main/readme_images/sign_up.png" alt="Sign Up Page" width="300" height="800">
 
