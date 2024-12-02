@@ -24,7 +24,9 @@ class SettingsSwitchTile extends StatelessWidget {
         children: [
           Text(
             label,
-            style: kBlackNunitoSmallTitleStyle,
+            style: kBlackNunitoSmallTitleStyle.copyWith(
+              fontWeight: FontWeight.w500,
+            ),
           ),
           CupertinoSwitch(
             value: value,

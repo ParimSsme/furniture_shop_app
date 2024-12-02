@@ -26,7 +26,9 @@ class SettingsTile extends StatelessWidget {
           ),
           Text(
             value,
-            style: kBlackNunitoSmallTitleStyle,
+            style: kBlackNunitoSmallTitleStyle.copyWith(
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ],
       ),

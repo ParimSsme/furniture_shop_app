@@ -46,7 +46,7 @@ class SettingsPage extends StatelessWidget {
           const SizedBox(height: 25),
           SettingsSectionHeader(
             title: 'Password',
-            onEditClick: (){},
+            onEditClick: () {},
           ),
           const SettingsTile(
             title: "Password",
@@ -60,19 +60,19 @@ class SettingsPage extends StatelessWidget {
           const SizedBox(height: 10),
           SettingsSwitchTile(
             label: "Sales",
-            onChanged: (val){},
+            onChanged: (val) {},
             value: true,
           ),
           const SizedBox(height: 10),
           SettingsSwitchTile(
             label: "New arrivals",
-            onChanged: (val){},
+            onChanged: (val) {},
             value: false,
           ),
           const SizedBox(height: 10),
           SettingsSwitchTile(
             label: "Delivery status changes",
-            onChanged: (val){},
+            onChanged: (val) {},
             value: false,
           ),
           const SizedBox(height: 25),
@@ -83,9 +83,14 @@ class SettingsPage extends StatelessWidget {
           const SizedBox(height: 10),
           AppCard(
             child: ListTile(
-              title: Text('FAQ', style: kBlackNunitoSmallTitleStyle,),
+              title: Text(
+                'FAQ',
+                style: kBlackNunitoSmallTitleStyle.copyWith(
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               trailing: const Icon(Icons.arrow_forward_ios_rounded),
-              onTap: (){},
+              onTap: () {},
             ),
           ),
         ],
