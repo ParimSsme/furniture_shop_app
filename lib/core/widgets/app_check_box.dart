@@ -24,9 +24,13 @@ class AppCheckBox extends StatelessWidget {
             activeColor: const Color(0xff222222),
           ),
         ),
-        Text(label, style: kBlackNunitoSmallTitleStyle.copyWith(
-          color: value ? Colors.black : Colors.grey,
-        ),)
+        Text(
+          label,
+          style: kBlackNunitoSmallTitleStyle.copyWith(
+            color: value ? Colors.black : Colors.grey,
+            fontWeight: FontWeight.w500,
+          ),
+        )
       ],
     );
   }
