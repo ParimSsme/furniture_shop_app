@@ -54,6 +54,8 @@ class LoginController extends GetxController {
         email: emailController.value.text,
       ),
     );
+    emailController.value.text = '';
+    passwordController.value.text = '';
     SharedPreferencesService.to.loggedIn = true;
     Get.offAllNamed(AppRoutes.home);
   }
