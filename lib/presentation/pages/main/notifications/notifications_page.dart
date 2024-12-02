@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_shop_app/core/assets/app_icon_assets.dart';
-import 'package:furniture_shop_app/presentation/controllers/notifications_controller.dart';
+import 'package:furniture_shop_app/presentation/controllers/main/notifications_controller.dart';
 import 'package:furniture_shop_app/presentation/pages/main/notifications/widgets/notification_list_item.dart';
 import 'package:get/get.dart';
 

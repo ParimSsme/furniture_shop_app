@@ -1,7 +1,7 @@
 import 'package:furniture_shop_app/domain/entities/notification_entity.dart';
 import 'package:get/get.dart';
-import '../../data/datasources/static_data_source.dart';
-import '../../data/repositories/static_data_repository.dart';
+import '../../../data/datasources/static_data_source.dart';
+import '../../../data/repositories/static_data_repository.dart';
 
 class NotificationsController extends GetxController {
   static NotificationsController get to => Get.find();
