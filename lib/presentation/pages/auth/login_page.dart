@@ -11,46 +11,43 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 75, right: 10, left: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    /// Header
+                    Row(
+                      children: [
+                        const Expanded(child: Divider(thickness: 1.5)),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: SvgPicture.asset(AppIconAssets.furniture),
+                        ),
+                        const Expanded(child: Divider(thickness: 1.5)),
+                      ],
+                    ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                    const SizedBox(height: 20),
 
-                  /// Header
-                  Row(
-                    children: [
-                      const Expanded(child: Divider(thickness: 1.5)),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: SvgPicture.asset(AppIconAssets.furniture),
-                      ),
-                      const Expanded(child: Divider(thickness: 1.5)),
-                    ],
-                  ),
-
-                  const SizedBox(height: 20),
-
-                  /// Greeting texts
-                  Text('Hello!', style: kGreyGelasioLargeTitleStyle),
-                  Text('WELCOME BACK', style: kBlackGelasioLargeTitleStyle),
-
-                ],
+                    /// Greeting texts
+                    Text('Hello!', style: kGreyGelasioLargeTitleStyle),
+                    Text('WELCOME BACK', style: kBlackGelasioLargeTitleStyle),
+                  ],
+                ),
               ),
-            ),
-
-            const LoginInputCard(),
-          ],
+              const LoginInputCard(),
+            ],
+          ),
         ),
       ),
     );
   }
 }
-
-
