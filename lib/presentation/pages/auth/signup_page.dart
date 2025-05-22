@@ -15,7 +15,9 @@ class SignUpPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(top: 75, left: 10),
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.1,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
