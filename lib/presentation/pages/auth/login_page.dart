@@ -12,45 +12,46 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-
-                  /// Header
-                  Row(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.1,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Expanded(child: Divider(thickness: 1.5)),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: SvgPicture.asset(AppIconAssets.furniture),
+                      /// Header
+                      Row(
+                        children: [
+                          const Expanded(child: Divider(thickness: 1.5)),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: SvgPicture.asset(AppIconAssets.furniture),
+                          ),
+                          const Expanded(child: Divider(thickness: 1.5)),
+                        ],
                       ),
-                      const Expanded(child: Divider(thickness: 1.5)),
+
+                      const SizedBox(height: 20),
+
+                      /// Greeting texts
+                      Text('Hello!', style: kGreyGelasioLargeTitleStyle),
+                      Text('WELCOME BACK', style: kBlackGelasioLargeTitleStyle),
                     ],
                   ),
-
-                  const SizedBox(height: 20),
-
-                  /// Greeting texts
-                  Text('Hello!', style: kGreyGelasioLargeTitleStyle),
-                  Text('WELCOME BACK', style: kBlackGelasioLargeTitleStyle),
-
-                ],
-              ),
+                ),
+                const LoginInputCard(),
+              ],
             ),
-
-            const LoginInputCard(),
-          ],
+          ),
         ),
       ),
     );
   }
 }
-
-

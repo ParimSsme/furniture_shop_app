@@ -13,39 +13,41 @@ class SignUpPage extends StatelessWidget {
       resizeToAvoidBottomInset: true,
       extendBody: true,
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-
-            /// Header
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.1,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                /// Header
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Expanded(child: Divider(thickness: 1.5)),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: SvgPicture.asset(AppIconAssets.furniture),
+                      Row(
+                        children: [
+                          const Expanded(child: Divider(thickness: 1.5)),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: SvgPicture.asset(AppIconAssets.furniture),
+                          ),
+                          const Expanded(child: Divider(thickness: 1.5)),
+                        ],
                       ),
-                      const Expanded(child: Divider(thickness: 1.5)),
+                      const SizedBox(height: 25),
+                      Text('WELCOME', style: kBlackGelasioLargeTitleStyle),
                     ],
                   ),
+                ),
 
-                  const SizedBox(height: 25),
-
-                  Text('WELCOME', style: kBlackGelasioLargeTitleStyle),
-                ],
-              ),
+                const SignupInputCard(),
+              ],
             ),
-
-
-            const SignupInputCard(),
-
-          ],
+          ),
         ),
       ),
     );
