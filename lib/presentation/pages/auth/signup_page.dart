@@ -12,37 +12,39 @@ class SignUpPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       extendBody: true,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 75, left: 10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              /// Header
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        const Expanded(child: Divider(thickness: 1.5)),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: SvgPicture.asset(AppIconAssets.furniture),
-                        ),
-                        const Expanded(child: Divider(thickness: 1.5)),
-                      ],
-                    ),
-                    const SizedBox(height: 25),
-                    Text('WELCOME', style: kBlackGelasioLargeTitleStyle),
-                  ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 75, left: 10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                /// Header
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          const Expanded(child: Divider(thickness: 1.5)),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: SvgPicture.asset(AppIconAssets.furniture),
+                          ),
+                          const Expanded(child: Divider(thickness: 1.5)),
+                        ],
+                      ),
+                      const SizedBox(height: 25),
+                      Text('WELCOME', style: kBlackGelasioLargeTitleStyle),
+                    ],
+                  ),
                 ),
-              ),
 
-              const SignupInputCard(),
-            ],
+                const SignupInputCard(),
+              ],
+            ),
           ),
         ),
       ),
